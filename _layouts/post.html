@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>{{ page.title }} by {{ site.author.name }} for {{ site.title }}</title>
+  <meta charset="utf-8" />
+  <meta name="author" content="{{ site.author.name }}" />
+  <meta name="keywords" content="{{ site.author.name }},{{ site.title }},Technical Blog,Architect,GNU Linux,Geek Blog,Mac OS X" />
+  <meta name="description" content="{{ site.title }}, is a personal blog of {{ site.author.name }}, focus on engineering technology, geek favors and home console entertainment." />
+  <meta name="creator" content="{{ site.author.name }}" />
+  <meta name="publisher" content="{{ site.author.name }}" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1,minimum-scale=1,maximum-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+  <meta name="format-detection" content="telephone=no,address=no" />
+  <meta name="robots" content="{% if page.robots %}{{ page.robots | join:',' }}{% else %}index,follow{% endif %}" />
+  <link rel="apple-touch-icon" href="https://s.szen.in/icon/144.png" type="image/png" />
+  <link rel="icon" href="https://s.szen.in/icon/64.png" type="image/png" />
+  <link rel="shortcut icon" href="https://s.szen.in/favicon.ico" />
+  <link rel="author" href="http://about.me/{{ site.author.aboutme }}" />
+  <link rel="license" href="http://creativecommons.org/licenses/by-nc-nd/3.0/deed.en_US" />
+  <link rel="index" href="/" />
+  <link rel="up" href="/" />{% for tag in page.tags %}
+  <link rel="tag" href="/tag/{{ tag }}.html" />{% endfor %}
+  <link rel="archives" href="/archive.html" />
+  <link rel="alternate" href="/rss.xml" type="application/rss+xml" />
+</head>
+<body>
+  <header>
+    <div>
+      <h1><a href="/">{{ site.title }}</a></h1>
+      <address>
+        <span>New Originals by </span>
+        <a href="http://about.me/{{ site.author.aboutme }}" target="_blank">{{ site.author.name }}</a>
+        <span> restarted in 2013</span>
+      </address>
+      <nav>
+        <ul>
+          <li><a href="/archive.html">Archives</a></li>
+          <li><a href="/rss.xml" title="RSS">RSS</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <main>
+    <div>
+      <section>
+        <div>
+          <article>
+            <header>
+              <div>
+                <h1>{{ page.title }}</h1>
+                <address>
+                  <time pubdate="true" datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date_to_long_string }}</time>
+                </address>{% if page.excerpt %}
+                <div>{{ page.excerpt | markdownify }}</div>{% endif %}
+              </div>
+            </header>
+            <main>
+{{ page.content | markdownify }}
+            </main>{% capture tags_size %}{{ page.tags | size }}{% endcapture %}{% if tags_size != "0" %}
+            <footer>
+              <fieldset>
+                <legend>Tags</legend>
+                <ul>
+{% for tag in page.tags %}                  <li>
+                    <a href="/tag/{{ tag }}.html" title="{{ tag }}">{{ tag }}</a>
+                  </li>{% endfor %}
+                </ul>
+              </fieldset>
+            </footer>{% endif %}{% assign tags_size = nil %}
+          </article>
+        </div>
+      </section>
+    </div>{% if page.next or page.previous %}
+    <div>
+      <section>
+        <div>
+          <ul>
+            <li>
+              {% if page.next %}<a href="{{ page.next.url }}">{{ page.next.title }}</a>{% else %}<span>Latest already</span>{% endif %}
+            </li>
+            <li>
+              {% if page.previous %}<a href="{{ page.previous.url }}">{{ page.previous.title }}</a>{% else %}<span>Earliest already</span>{% endif %}
+          </li>
+          </ul>
+        </div>
+      </section>
+    </div>{% endif %}
+  </main>
+  <footer>
+    <address>
+      <span>Hosted by </span>
+      <a href="http://rashost.com" target="_blank">rashost.com</a>
+      <span>.</span>
+    </address>
+    <div>
+      <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/3.0/deed.en_US"><img alt="Creative Commons License" style="border-width:0" src="https://s.szen.in/license/cc.by-nc-nd.3_0.80x15.png" /></a>
+      <span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">{{ site.title | upcase }}</span>
+      <span> by </span>
+      <a xmlns:cc="http://creativecommons.org/ns#" href="https://szen.in" property="cc:attributionName" rel="cc:attributionURL">{{ site.author.name }}</a>
+      <span> is licensed under a </span>
+      <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/3.0/deed.en_US">Creative Commons Attribution-NonCommercial-NoDerivs 3.0 Unported License</a>
+      <span>.</span>
+    </div>
+  </footer>
+</body>
+</html>
