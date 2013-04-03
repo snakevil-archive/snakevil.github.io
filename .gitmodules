@@ -2,3 +2,4 @@
 	path = _posts
 	url = git://github.com/snakevil/snakevil.github.com.git
 	branch = posts
+    ignore = all
