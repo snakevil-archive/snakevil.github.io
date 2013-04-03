@@ -18,3 +18,7 @@ author:
   twitter: snakevil
   facebook: snakevil.zen
   aboutme: snakevil.zen
+
+limit:
+  index: 6
+  tags: 36

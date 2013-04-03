@@ -12,7 +12,9 @@
               </div>
             </header>
             <main>
+              <div>
 {{ page.content | markdownify }}
+              </div>
             </main>{% capture tags_size %}{{ page.tags | size }}{% endcapture %}{% if tags_size != "0" %}
             <footer>
               <fieldset>
