@@ -23,7 +23,7 @@
   <link rel="up" href="/" />{% for tag in page.tags %}
   <link rel="tag" href="/tag/{{ tag }}.html" />{% endfor %}
   <link rel="archives" href="/archive.html" />
-  <link rel="alternate" href="/rss.xml" type="application/rss+xml" />
+  <link rel="alternate" href="/rss.xml" title="{{ site.title }} by {{ site.author.name }}" type="application/atom+xml" />
 </head>
 <body>
   <header>
@@ -37,7 +37,7 @@
       <nav>
         <ul>
           <li><a href="/archive.html">Archives</a></li>
-          <li><a href="/rss.xml" title="RSS">RSS</a></li>
+          <li><a href="/atom.xml" title="ATOM RSS">RSS</a></li>
         </ul>
       </nav>
     </div>
