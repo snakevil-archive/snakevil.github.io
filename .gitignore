@@ -1,0 +1,11 @@
+.*
+/*.*
+_site/
+
+# git configurations
+!.gitattributes
+!.gitignore
+
+# functional files
+!/README.md
+!/_config.yml

@@ -1,0 +1,19 @@
+safe: true
+auto: false
+exclude:
+  - CNAME
+  - README.md
+baseurl: /
+
+markdown: redcarpet
+pygments: true
+lsi: false
+permalink: /:year/:month/:title.html
+
+title: "Molting Everyday"
+author:
+  name: "Snakevil Zen"
+  email: "zsnakevil@gmail.com"
+  github: snakevil
+  twitter: snakevil
+  facebook: snakevil.zen
