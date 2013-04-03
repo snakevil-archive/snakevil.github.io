@@ -3,6 +3,7 @@ layout: post
 title: "Nginx 如何处理 URL 中的空格"
 date: 2013-03-29 10:45:00
 tags: ["nginx"]
+published: false
 ---
 
 最近反复碰到 [Nginx][] 错误处理 URL 中空格的问题，无论是 `%20` 还是 `+` ，都有可能被错误处理导致错误的 [`404`](http://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html#sec10.4.5) 响应。

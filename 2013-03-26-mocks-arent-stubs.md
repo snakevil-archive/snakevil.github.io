@@ -4,7 +4,7 @@ title: "【译】Mocks 并非 Stubs"
 date: 2013-03-25 23:03:00
 tags: ["translation", "xunit"]
 excerpt: 『Mock 对象』一词，因其在测试中被广泛用于描述一种特殊的、模仿真实对象的测试用对象，而越发流行。现如今绝大多数的语言，都有了可轻易创建 Mock 对象的框架。Mock 对象虽并非真实地实现，但其也是多种测试用对象之一，使另一种与众不同的测试风格变为可能。在此文中，我将解释 Mock 对象是如何工作地，它是如何鼓励大家实现基于行为验证（Behavior Verification）的测试，以及其爱好者社区是如何实践这一风格迥然的测试方法。
-published: true
+published: false
 ---
 
 ## 译者注
