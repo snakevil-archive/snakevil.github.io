@@ -23,7 +23,7 @@
   <link rel="up" href="/" />{% for tag in page.tags %}
   <link rel="tag" href="/tag/{{ tag }}.html" />{% endfor %}
   <link rel="archives" href="/archive.html" />
-  <link rel="alternate" href="/rss.xml" title="{{ site.title }} by {{ site.author.name }}" type="application/atom+xml" />
+  <link rel="alternate" href="/atom.xml" title="{{ site.title }} by {{ site.author.name }}" type="application/atom+xml" />
 </head>
 <body>
   <header>
@@ -33,13 +33,14 @@
         <span>New Originals by </span>
         <a href="http://about.me/{{ site.author.aboutme }}" target="_blank">{{ site.author.name }}</a>
         <span> restarted in 2013</span>
-      </address>
+      </address>{% assign pages_size = "0" %}{% for fpage in site.pages %}{% if fpage.layout == "page" and fpage.title != "Index" and fpage.title != page.title %}{% capture pages_size %}{{ pages_size | plus:1 }}{% endcapture %}{% endif %}{% endfor %}{% if pages_size > "0" %}
       <nav>
-        <ul>
-          <li><a href="/archive.html">Archives</a></li>
-          <li><a href="/atom.xml" title="ATOM RSS">RSS</a></li>
+        <ul>{% for fpage in site.pages %}{% if fpage.layout == "page" and fpage.title != "Index" and fpage.title != page.title %}
+          <li>
+            <a href="{{ fpage.url }}" title="{{ fpage.title }}">{{ fpage.title }}</a>
+          </li>{% endif %}{% endfor %}
         </ul>
-      </nav>
+      </nav>{% endif %}{% assign pages_size = nil %}
     </div>
   </header>
   <main>
