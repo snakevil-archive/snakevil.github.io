@@ -26,7 +26,7 @@ excerpt: 玩 Git 这么久，一直都会觉得 `.gitignore` 是一种很神奇�
 
 需要注意地是，无论是从什么地方开始执行这个指令，它都会认为当前目录是根目录（*在 [Git][] 配置中可直接使用 `$GIT_PREFIX` 环境变量，外部 shell 中使用 `'git' rev-parse --show-toplevel`[^3] 取得*），然后向深处开始寻找 `.gitignore` 配置…（见下图）！
 
-![Mad git-check-ignore on 1.8.2](https://s.szen.in/i0/mad-git-check-ignore-on-1_8_2.png)
+![Mad git-check-ignore on 1.8.2]({{ site.asset.url }}/i1/mad-git-check-ignore-on-1_8_2.png)
 
 ## 温故 `gitignore`
 

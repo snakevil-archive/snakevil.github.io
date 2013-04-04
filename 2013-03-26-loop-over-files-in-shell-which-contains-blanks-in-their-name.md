@@ -7,7 +7,7 @@ tags: ["shell", "git"]
 
 近期在 [Git][] 全局配置中新增了一个仿 `ls` 的别名，使用 shell 实现，其显示效果类似于 [GitHub][] 。但在处理带空格的文件时，发现一些问题。因此又做了一些修正。
 
-![Sample of Git `LS`](https://s.szen.in/i8/sample-of-git-ls.png)
+![Sample of Git `LS`]({{ site.asset.url }}/ic/sample-of-git-ls.png)
 
 其代码如下：
 
