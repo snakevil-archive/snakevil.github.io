@@ -1,6 +1,7 @@
 ---
 layout: page
 title: Archive
+navigation: true
 ---
   <section><fieldset>{% assign later_mon = "" %}{% for post in site.posts %}{% capture now_mon %}{{ post.date | date:"%B %Y" }}{% endcapture %}{% if later_mon != now_mon %}{% if later_mon != "" %}
   </fieldset></section>

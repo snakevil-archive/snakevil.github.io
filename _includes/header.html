@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta http-equiv="Content-Type" content="text/html; Charset=utf-8"/>
-  <title>{{ site.title }} - {{ page.title }}</title>
+  <title>{{ site.title }}{% if page.title %} - {{ page.title }}{% endif %}</title>
   <meta name="author" content="{{ site.author.name }}" />
   <meta name="keywords" content="{{ site.author.name }},{{ site.title }},Technical Blog,Architect,GNU Linux,Geek Blog,Mac OS X" />
   <meta name="description" content="{{ site.title }}, is a personal blog of {{ site.author.name }}, focus on engineering technology, geek favors and home console entertainment." />
@@ -39,10 +39,13 @@
       <span>New Originals by </span>
       <a href="http://about.me/{{ site.author.aboutme }}" target="_blank">{{ site.author.name }}</a>
       <span> restarted in 2013</span>
-    </div>{% assign pages_size = "0" %}{% for fpage in site.pages %}{% if fpage.layout == "page" and fpage.title != "Index" and fpage.title != page.title %}{% capture pages_size %}{{ pages_size | plus:1 }}{% endcapture %}{% endif %}{% endfor %}{% if pages_size > "0" %}
-    <nav><ul>{% for fpage in site.pages %}{% if fpage.layout == "page" and fpage.title != "Index" and fpage.title != page.title %}
+    </div>
+    <nav><ul>{% for fpage in site.pages %}{% if fpage.navigation and fpage.title != page.title %}
       <li>
         <a href="{{ fpage.url }}" title="{{ fpage.title }}">{{ fpage.title }}</a>
       </li>{% endif %}{% endfor %}
-    </ul></nav>{% endif %}{% assign pages_size = nil %}
+      <li>
+        <a href="/atom.xml" title="RSS">RSS</a>
+      </li>
+    </ul></nav>
   </div></header>
