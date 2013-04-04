@@ -45,5 +45,5 @@
           </ul>
         </div>
       </section>
-    </div>{% endif %}
-{% include footer.html %}
+    </div>{% endif %}{% if site.author.disqus %}
+{% include disqus/thread.html %}{% endif %}{% include footer.html %}
