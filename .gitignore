@@ -14,6 +14,7 @@
 !/i*/**/*.gif
 !/i*/**/*.jpg
 !/i*/**/*.png
+!/i*/**/*.svg
 
 # script assets
 !/j/**/*.js
