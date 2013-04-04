@@ -19,7 +19,7 @@ title: Index
               </header>
               <main>
                 <div>
-{{ post.content | markdownify }}
+{{ post.content | split:"<!--"site.title"-->" | first | markdownify }}
                 </div>
               </main>
             </article>
