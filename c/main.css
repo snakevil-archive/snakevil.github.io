@@ -1,0 +1,245 @@
+body {
+  margin: 0;
+  line-height: 1;
+  font-family: sans-serif;
+  font-size: 1em;
+}
+h1 {
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 2em;
+  margin: .6em 0 .4em 0;
+  padding: 0;
+}
+h2 {
+  text-transform: uppercase;
+  font-size: 1.7em;
+  margin: .6em 0 .4em 0;
+  padding: 0;
+}
+h3 {
+  font-variant: small-caps;
+  font-size: 1.4em;
+}
+h4 {
+  font-variant: small-caps;
+  font-size: 1.2em;
+}
+fieldset, img {
+  border-width: 0;
+}
+fieldset, legend, ol, ul, blockquote {
+  margin: 0;
+  padding: 0;
+}
+ol, ul {
+  list-style: none;
+}
+p {
+  line-height: 1.75;
+}
+a::before, a::after {
+  font-size: .6em;
+}
+
+.post::before {
+  content: '《';
+}
+.post::after {
+  content: '》';
+}
+.tag::before {
+  content: '#';
+}
+.tag-6, .tag-7, .tag-8, .tag-9, .tag-10, .tag-11, .tag-12, .tag-13, .tag-14, .tag-15, .tag-16, .tag-17, .tag-18, .tag-19, .tag-20 {
+  font-size: 1.4em;
+}
+.tag-4, .tag-5 {
+  font-size: 1.2em;
+}
+.tag-2, .tag-3 {
+  font-size: 1em;
+}
+.tag-0, .tag-1 {
+  font-size: .8em;
+}
+
+.page-header, .page-footer {
+  z-index: 1;
+}
+.page-main {
+  margin-left: 19%;
+  margin-right: 19%;
+}
+.page-article {
+  margin-top: 2em;
+  margin-bottom: 2em;
+}
+.page-archive legend {
+  font-weight: bold;
+  width: 100%;
+}
+.page-archive legend div {
+  font-size: 3em;
+  margin: 0 24% 0 14%;
+  padding: .6em 0 .4em 9%;
+}
+
+.blog-brief {
+  font-style: oblique;
+  padding: 1em 19%;
+}
+.blog-title {
+  font-size: 4em;
+  font-variant: small-caps;
+  padding: .6em 19% .4em 19%;
+}
+.blog-title::before {
+  content: '# LIFE=$(';
+}
+.blog-title::after {
+  content: ');';
+}
+.blog-title::before,
+.blog-title::after {
+  font-size: .4em;
+}
+.blog-pages {
+  padding: 1em 31%;
+  text-align: right;
+}
+.blog-pages li {
+  display: inline;
+  padding: 0 .6em;
+}
+.blog-tags {
+  position: fixed;
+  top: 11em;
+  left: 1%;
+  width: 17%;
+  text-align: right;
+}
+.blog-tags li {
+  line-height: 1.5;
+  display: inline;
+}
+.blog-tags a {
+  white-space: nowrap;
+  text-transform: capitalize;
+}
+.blog-tags span {
+  font-size: .6em;
+}
+.blog-power {
+  font-size: .8em;
+  padding: .9em 0 .6em 0;
+  text-align: center;
+}
+.blog-power a {
+  font-variant: small-caps;
+}
+.blog-license {
+  font-family: serif;
+  text-align: center;
+  padding: 1em 0;
+}
+.blog-license img {
+  position: relative;
+  top: .1em;
+}
+
+.article-time {
+  padding: 0.5em 19%;
+  text-align: right;
+  line-height: 1.5;
+}
+.article-time time {
+  float: left;
+  margin-right: 1em;
+  font-style: oblique;
+}
+.post + .article-time time {
+  float: none;
+  margin-right: 0;
+}
+.article-time a {
+  white-space: nowrap;
+  margin: 0 .4em;
+  text-transform: capitalize;
+}
+.article-excerpt {
+  font-weight: bold;
+}
+.article-more {
+  padding: 0 1em;
+}
+.article-tags {
+  padding: 1em 19%;
+  text-align: center;
+  line-height: 2;
+}
+.article-siblings {
+  padding: 1em 0 2em 0;
+  text-align: center;
+}
+.article-tags legend, .article-siblings legend {
+  display: none;
+}
+.article-tags li, .article-siblings li {
+  display: inline;
+}
+.article-tags a {
+  text-transform: capitalize;
+  font-size: 1.2em;
+  padding: .3em .6em;
+  margin: .3em;
+}
+.article-next {
+  float: left;
+}
+.article-next::before {
+  content: '☜';
+}
+.article-previous {
+  float: right;
+}
+.article-previous::after {
+  content: '☞';
+}
+.article-excerpt p img, .article-content p img {
+  max-width: 100%;
+  display: block;
+  margin: 0 auto;
+  border-radius: .5em;
+}
+.article-excerpt .highlight, .article-content .highlight {
+  overflow: scroll;
+}
+.article-excerpt blockquote, .article-content blockquote {
+  padding: .5em 1em;
+}
+
+.archive-posts li {
+  margin: .5em 0;
+}
+.archive-posts a {
+  text-transform: uppercase;
+  font-size: 1.2em;
+}
+.archive-posts time {
+  font-size: .8em;
+  font-style: oblique;
+  font-weight: bold;
+}
+.archive-tags {
+  padding: .5em 24% .5em 14%;
+}
+.archive-tags li {
+  display: inline;
+  line-height: 2;
+  padding: 0 .1em;
+}
+.archive-tags a {
+  text-transform: capitalize;
+  font-size: 1em;
+}
