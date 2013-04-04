@@ -7,6 +7,10 @@ tags: ["internet", "web-services-of-life"]
 
 [Google][] 近期不知道啥时候就悄然上线了应用级密码功能。体验暂时不深，还不好定调子是该拍马屁还是拍砖。先过把瘾头。
 
+[Google]: https://www.google.com
+
+<!--{{ site.title }}-->
+
 1. 点击右上角的头像，选择『Account』链接；
 
 	![Way to Google Application-Specific Passwords Step-1]({{ site.asset.url }}/i5/way-to-google-application-specific-passwords-1.png)
@@ -28,5 +32,3 @@ tags: ["internet", "web-services-of-life"]
 最后上一张使用此功能的 Google Chrome Sync 登录界面截图：
 
 ![Way to Google Application-Specific Passwords Step-2.2]({{ site.asset.url }}/i4/way-to-google-application-specific-passwords-4.png)
-
-[Google]: https://www.google.com

@@ -16,6 +16,13 @@ excerpt: 玩 Git 这么久，一直都会觉得 `.gitignore` 是一种很神奇�
 
 但这对我们该如何更好地编写 `.gitignore` 配置毫无帮助——你知其然而不知其所以然。
 
+[^1]: [Show ignored files in git *on stackOverflow*](http://stackoverflow.com/questions/466764/show-ignored-files-in-git)
+
+[Tox]: https://github.com/php-tox/tox
+[Git]: https://git.wiki.kernel.org/index.php/Git_FAQ
+
+<!--{{ site.title }}-->
+
 ## 未来可期的 `git-check-ignore`
 
 翻回 [Git][] 的 manpage ，可以找到这样一条指令：
@@ -76,10 +83,7 @@ excerpt: 玩 Git 这么久，一直都会觉得 `.gitignore` 是一种很神奇�
 
 **a** 其它情况下，包含 `**` 的模式会被作为无效模式处理。
 
-[^1]: [Show ignored files in git *on stackOverflow*](http://stackoverflow.com/questions/466764/show-ignored-files-in-git)
 [^2]: [git-check-ignore(1) Manpage *on Google Code*](https://code.google.com/p/git-core/source/browse/Documentation/git-check-ignore.txt?name=v1.8.2)
 [^3]: [Line 40 of snakevil/bashrc.x/src/etc/bashrc.d/95-prompt-vcs-git.sh *on Github*](https://github.com/snakevil/bashrc.x/blob/master/src/etc/bashrc.d/95-prompt-vcs-git.sh#L40)
 
-[Tox]: https://github.com/php-tox/tox
-[Git]: https://git.wiki.kernel.org/index.php/Git_FAQ
 [fnmatch(3)]: http://linux.die.net/man/3/fnmatch

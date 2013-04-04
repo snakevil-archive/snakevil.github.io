@@ -24,6 +24,14 @@ tags: ["git", "gnupg", "gnupg2", "gpg", "pinentry-curses"]
 
 网上找了很久，都没有对应的资料。但这么玩的哥们绝对多到不行，为什么会没有问题呢？
 
+[^1]: `gpg`全名`The GNU Privacy Guard`，是 [GNU](http://www.gnu.org) 版本的 `pgp`（`Pretty Good Privacy`）。
+
+[Git]: https://git.wiki.kernel.org/index.php/Git_FAQ
+[GnuPG]: http://gnupg.org
+[MacPorts]: http://www.macports.org
+
+<!--{{ site.title }}-->
+
 **当时为了先做正事，避免被耽搁，被迫删除了私钥的密码。**
 
 之后在 [Git][] 中尝试设置 `gpg.program` ，无效。尝试翻 [GnuPG2][GnuPG] 的文档，无果。尝试将 `gpg2` 软链到 `gpg` …最后暂时性地放弃了。
@@ -33,9 +41,3 @@ tags: ["git", "gnupg", "gnupg2", "gpg", "pinentry-curses"]
 **问题居然自然消失了！**
 
 看来只能说 [Git][] 和 [GnuPG2][GnuPG] 还没有形成配合默契，老老实实继续用 [GnuPG][] 吧。
-
-[^1]: `gpg`全名`The GNU Privacy Guard`，是 [GNU](http://www.gnu.org) 版本的 `pgp`（`Pretty Good Privacy`）。
-
-[git]: https://git.wiki.kernel.org/index.php/Git_FAQ
-[GnuPG]: http://gnupg.org
-[MacPorts]: http://www.macports.org

@@ -9,6 +9,11 @@ tags: ["shell", "git"]
 
 ![Sample of Git `LS`]({{ site.asset.url }}/ic/sample-of-git-ls.png)
 
+[Git]: https://git.wiki.kernel.org/index.php/Git_FAQ
+[GitHub]: https://github.com
+
+<!--{{ site.title }}-->
+
 其代码如下：
 
 	cd "${GIT_PREFIX}";
@@ -35,5 +40,3 @@ tags: ["shell", "git"]
 2. 使用 `while read` 替换 `for` 避开以空格作为间隔符的尴尬；
 
 3. 使用 `$()` 为 `$maxlen` 赋值避开管道的 sub-shell 问题。
-
-[Git]: https://git.wiki.kernel.org/index.php/Git_FAQ

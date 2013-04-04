@@ -9,6 +9,11 @@ tags: ["gnupg", "gpg"]
 
 但 [GnuPG][] 这种工具，估计对于很多人来说，比 [OpenSSL][] 还要生僻。因此整这么一篇基础教程，方便大家入门。不过此教程基于 *Mac OS X* 完成，*Debian* 下测试，因缺乏 *Windows* 环境，请大家自行脑补转译…
 
+[GnuPG]: http://gnupg.org
+[OpenSSL]: http://www.openssl.org
+
+<!--{{ site.title }}-->
+
 ### 0 安装 [GnuPG][]
 
 这个步骤不用多说，依照个人嗜好来即可。唯一需要注意地是，为了能够与 [Git][] 正常配合工作，请选择 [GnuPG][] 而不是 [GnuPG2][GnuPG] 。
@@ -185,7 +190,5 @@ tags: ["gnupg", "gpg"]
 
 #### V 服务器上的公钥无法被删除
 
-[GnuPG]: http://gnupg.org
-[OpenSSL]: http://www.openssl.org
 [Git]: https://git.wiki.kernel.org/index.php/Git_FAQ
 [MacPorts]: http://www.macports.org

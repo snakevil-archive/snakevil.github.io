@@ -17,6 +17,8 @@ published: false
 
 **尊重劳动，谢绝转载！**
 
+<!--{{ site.title }}-->
+
 ## TOC
 
 * [常规测试](#regular-tests)
