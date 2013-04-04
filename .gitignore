@@ -1,0 +1,19 @@
+*.*
+
+# git configurations
+!.gitignore
+
+# functional files
+!/README.md
+
+# css assets
+!/c/**/*.css
+
+# image assets
+!/favicon.ico
+!/i*/**/*.gif
+!/i*/**/*.jpg
+!/i*/**/*.png
+
+# script assets
+!/j/**/*.js
