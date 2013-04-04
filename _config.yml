@@ -5,7 +5,6 @@ exclude:
   - README.md
 url: "https://szen.in"
 baseurl: /
-
 markdown: redcarpet
 pygments: true
 lsi: false
@@ -20,8 +19,9 @@ author:
   facebook: snakevil.zen
   aboutme: snakevil.zen
   disqus: snakevil
-
 limit:
   index: 6
   tags: 36
   rss: 36
+asset:
+  url: "https://s.szen.in"
