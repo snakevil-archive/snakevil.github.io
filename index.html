@@ -1,30 +1,31 @@
 ---
 layout: page
 ---
-  <section><div class="section">{% for post in site.posts limit:site.limit.index %}
-    <article><div class="article">
-      <header><div class="header">
-        <h1><a href="{{ post.url }}">{{ post.title }}</a></h1>
-        <div>
+  <section><div class="page-main">{% for post in site.posts limit:site.limit.index %}
+    <article><div class="page-article">
+      <header><div class="article-header">
+        <h1><a class="post" href="{{ post.url }}">{{ post.title }}</a></h1>
+        <div class="article-time">
           <time pubdate="true" datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date_to_long_string }}</time>{% for tag in post.tags %}
-          <a href="/tag/{{ tag }}.html">{{ tag }}</a>{% endfor %}
+          <a class="tag" href="/tag/{{ tag }}.html">{{ tag }}</a>{% endfor %}
         </div>{% if post.excerpt %}
-        <div>
+        <div class="article-excerpt">
 {{ post.excerpt | markdownify }}        </div>{% endif %}
       </div></header>
-      <section><div class="section">
-{{ post.content | split:"<!--"site.title"-->" | first | markdownify }}      </div></section>
-    </div></article>
-  </div></section>{% endfor %}{% capture posts_left_size %}{{ site.posts | size | minus:site.limit.index }}{% endcapture %}{% if posts_left_size > "0" %}
-  <section><div class="section">
-    <nav><div class="nav">
+      <section><div class="article-content">
+{{ post.content | split:"<!--"site.title"-->" | first | markdownify }}      </div></section>{% capture post_left_size %}{{ post.content | split:"<!--"site.title"-->" | size }}{% endcapture %}{% if post_left_size > "1" %}
+      <footer><div class="article-footer">
+        <p class="article-more">……</p>
+      </div></footer>{% endif %}{% assign post_left_size = nil %}
+    </div></article>{% endfor %}{% capture posts_left_size %}{{ site.posts | size | minus:site.limit.index }}{% endcapture %}{% if posts_left_size > "0" %}
+    <nav><div class="index-more">
       <a href="/archive.html">Read left {{ posts_left_size }} post{% if posts_left_size > "1" %}s{% endif %}</a>
-    </div></nav>
-  </div></section>{% endif %}{% assign posts_left_size = nil %}
-  <aside><div class="aside">
+    </div></nav>{% endif %}{% assign posts_left_size = nil %}
+  </div></section>
+  <aside><div class="blog-tags">
     <nav><ul>{% for tag in site.tags limit:site.limit.tags %}
       <li>
-        <a href="/tag/{{ tag | first }}.html" class="tag-{{ tag | last | size | times:8 | divided_by:site.tags.size }}">{{ tag | first }}</a>
+        <a href="/tag/{{ tag | first }}.html" class="tag tag-{{ tag | last | size | times:20 | divided_by:site.tags.size }}">{{ tag | first }}</a>
         <span>({{ tag | last | size }})</span>
       </li>{% endfor %}
     </ul></nav>
