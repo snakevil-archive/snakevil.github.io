@@ -1,38 +1,26 @@
-{% include header.html %}    <div>
-      <section>
-        <div>
-          <article>
-            <header>
-              <div>
-                <h1>{{ page.title }}</h1>
-                <address>
-                  <time pubdate="true" datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date_to_long_string }}</time>
-                </address>{% if page.excerpt %}
-                <div>{{ page.excerpt | markdownify }}</div>{% endif %}
-              </div>
-            </header>
-            <main>
-              <div>
-{{ page.content | markdownify }}
-              </div>
-            </main>{% capture tags_size %}{{ page.tags | size }}{% endcapture %}{% if tags_size != "0" %}
-            <footer>
-              <fieldset>
-                <legend>Tags</legend>
-                <ul>{% for tag in page.tags %}
-                  <li>
-                    <a href="/tag/{{ tag }}.html" title="{{ tag }}">{{ tag }}</a>
-                  </li>{% endfor %}
-                </ul>
-              </fieldset>
-            </footer>{% endif %}{% assign tags_size = nil %}
-          </article>
-        </div>
-      </section>
-    </div>{% if page.next or page.previous %}
-    <div>
-      <section>
-        <div>
+{% include header.html %}  <article><div class="article">
+    <header><div class="header">
+      <h1>{{ page.title }}</h1>
+      <div class="time">
+        <time pubdate="true" datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date_to_long_string }}</time>
+      </div>{% if page.excerpt %}
+      <div class="excerpt">
+{{ page.excerpt | markdownify }}      </div>{% endif %}
+    </div></header>
+    <section><div class="section">
+{{ page.content | markdownify }}    </div></section>
+    <footer><div class="footer">{% capture tags_size %}{{ page.tags | size }}{% endcapture %}{% if tags_size != "0" %}
+      <fieldset>
+        <legend>Tags</legend>
+        <nav><ul>{% for tag in page.tags %}
+          <li>
+            <a href="/tag/{{ tag }}.html" title="{{ tag }}">{{ tag }}</a>
+          </li>{% endfor %}
+        </ul></nav>
+      </fieldset>{% endif %}{% assign tags_size = nil %}{% if page.next or page.previous %}
+      <fieldset>
+        <legend>Siblings</legend>
+        <nav>
           <ul>
             <li>{% if page.next %}
               <a href="{{ page.next.url }}">{{ page.next.title }}</a>{% else %}
@@ -41,9 +29,10 @@
             <li>{% if page.previous %}
               <a href="{{ page.previous.url }}">{{ page.previous.title }}</a>{% else %}
               <a href="/archive.html">Archive</a>{% endif %}
-          </li>
+            </li>
           </ul>
-        </div>
-      </section>
-    </div>{% endif %}{% if site.author.disqus %}
-{% include disqus/thread.html %}{% endif %}{% include footer.html %}
+        </nav>
+      </fieldset>{% endif %}{% if site.author.disqus %}
+{% include disqus/thread.html %}{% endif %}    </div></footer>
+  </div></article>
+{% include footer.html %}
