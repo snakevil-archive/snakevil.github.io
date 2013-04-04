@@ -8,7 +8,7 @@
 {{ page.excerpt | markdownify }}      </div>{% endif %}
     </div></header>
     <section><div class="section">
-{{ page.content | markdownify }}    </div></section>
+{{ content | markdownify }}    </div></section>
     <footer><div class="footer">{% capture tags_size %}{{ page.tags | size }}{% endcapture %}{% if tags_size != "0" %}
       <fieldset>
         <legend>Tags</legend>
