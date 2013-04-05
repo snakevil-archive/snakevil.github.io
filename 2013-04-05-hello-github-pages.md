@@ -32,6 +32,6 @@ excerpt: 虽然 scriptogr.am 在 SEO 做得非常不错——三天之内页面�
 
 	![Commits Snapshot on branch `Master`]({{ site.asset.url }}/a/b/hello-github-pages-4.png)
 
-**资源** *分支* 里， **文章** 用图与 **页面模板** 用图还未分离的问题， ~~打算~~ 继续使用 [Git][] 的 `submodule` 功能来搞定。 ~~不过这个一时半会也不着急，有空再说吧。~~ 已火速搞定！
+**资源** *分支* 里， **文章** 用图与 **页面模板** 用图还未分离的问题， <del>打算</del>继续使用 [Git][] 的 `submodule` 功能来搞定。 <del>不过这个一时半会也不着急，有空再说吧。</del> 嗯嗯，已火速搞定！
 
 [Git]: https://git.wiki.kernel.org/index.php/Git_FAQ
