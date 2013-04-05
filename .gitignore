@@ -7,18 +7,18 @@
 # functional files
 !/README.md
 
-# css assets
+# css static
 !/c/**/*.css
 
-# font assets
+# font static
 !/f/**/*.woff
 
-# image assets
+# image static
 !/favicon.ico
-!/i*/**/*.gif
-!/i*/**/*.jpg
-!/i*/**/*.png
-!/i*/**/*.svg
+!/i/**/*.gif
+!/i/**/*.jpg
+!/i/**/*.png
+!/i/**/*.svg
 
-# script assets
+# script static
 !/j/**/*.js

@@ -1,0 +1,4 @@
+[submodule "assets"]
+	path = a
+	url = git://github.com/snakevil/snakevil.github.com.git
+	branch = assets
