@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Git 与 GnuPG2 配合地 pinentry-curses 错误"
-date: 2013-03-25 12:09:00
+date: 2013-03-25 12:09:00+08:00
 tags: ["git", "gnupg", "gnupg2", "gpg", "pinentry-curses"]
 ---
 

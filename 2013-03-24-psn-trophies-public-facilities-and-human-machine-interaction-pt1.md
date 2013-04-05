@@ -1,7 +1,7 @@
 ---
 layout: post
-title: "PSN奖杯、公共设施与人机交互㈠"
-date: 2013-03-24 21:29:00
+title: "PSN 奖杯、公共设施与人机交互㈠"
+date: 2013-03-24 21:29:00+08:00
 tags: ["interaction-design"]
 published: false
 ---

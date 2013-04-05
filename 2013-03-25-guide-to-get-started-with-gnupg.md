@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "GnuPG 入门教程"
-date: 2013-03-25 14:12:00
+date: 2013-03-25 14:12:00+08:00
 tags: ["gnupg", "gpg"]
 ---
 

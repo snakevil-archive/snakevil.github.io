@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Nginx 如何处理 URL 中的空格"
-date: 2013-03-29 10:45:00
+date: 2013-03-29 10:45:00+08:00
 tags: ["nginx"]
 published: false
 ---

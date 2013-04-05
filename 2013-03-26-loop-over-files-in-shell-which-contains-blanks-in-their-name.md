@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "在 Shell 中遍历带空格的文件列表"
-date: 2013-03-26 20:15:00
+date: 2013-03-26 20:15:00+08:00
 tags: ["shell", "git"]
 ---
 

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "新的旅程"
-date: 2013-03-23 01:29:00
+date: 2013-03-23 01:29:00+08:00
 tags: ["life-trace"]
 ---
 

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Google 开始提供应用级密码功能"
-date: 2013-03-27 23:38:00
+date: 2013-03-27 23:38:00+08:00
 tags: ["internet", "web-services-of-life"]
 ---
 

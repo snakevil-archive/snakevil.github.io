@@ -1,7 +1,7 @@
 ---
 layout: post
-title: "你好，GitHub Pages"
-date: 2013-04-05 22:09:44
+title: "你好， GitHub Pages ！"
+date: 2013-04-05 22:09:44+08:00
 tags: ["github-pages", "life-trace"]
 excerpt: 虽然 scriptogr.am 在 SEO 做得非常不错——三天之内页面就能上 Google 关键词搜索第一页——但样式实在是太苦手了，API 也简略到不能忍。所以在了解了 GitHub Pages 之后，果断搬家了。
 ---
@@ -32,6 +32,11 @@ excerpt: 虽然 scriptogr.am 在 SEO 做得非常不错——三天之内页面�
 
 	![Commits Snapshot on branch `Master`]({{ site.asset.url }}/a/b/hello-github-pages-4.png)
 
-**资源** *分支* 里， **文章** 用图与 **页面模板** 用图还未分离的问题， <del>打算</del>继续使用 [Git][] 的 `submodule` 功能来搞定。 <del>不过这个一时半会也不着急，有空再说吧。</del> 嗯嗯，已火速搞定！
+**资源** *分支* 里， **文章** 用图与 **页面模板** 用图还未分离的问题， <del datetime="2013-04-05 23:24:32+08:00">打算</del>继续使用 [Git][] 的 `submodule` 功能来搞定。 <del datetime="2013-04-05 23:24:32+08:00">不过这个一时半会也不着急，有空再说吧。</del> <ins datetime="2013-04-05 23:24:32+08:00">嗯嗯，已火速搞定！</ins>
+
+*<ins datetime="2013-04-05 23:46:00+08:00">唉！</ins> [Markdown][] 啥时候能像 [W3C][] 一样与时俱进，支持 `<del/>` 和 `<ins/>` 这样的 [HTML5][] 新标签呢？！*
 
 [Git]: https://git.wiki.kernel.org/index.php/Git_FAQ
+[Markdown]: daringfireball.net/projects/markdown/syntax
+[W3C]: http://www.w3.org
+[HTML5]: https://developer.mozilla.org/en-US/docs/HTML/HTML5
