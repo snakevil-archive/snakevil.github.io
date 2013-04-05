@@ -74,6 +74,10 @@ p a, time, .tag {
 }
 code {
   font-size: .9em;
+  white-space: nowrap;
+}
+pre code {
+  white-space: pre;
 }
 .post::before {
   content: '《';

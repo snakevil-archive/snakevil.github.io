@@ -27,12 +27,12 @@ body {
   font-family: 'Helvetica Neue', 'Microsoft Yahei', sans-serif;
 }
 h1, h2, h3, h4, blockquote,
-h1 code, h2 code, h3 code, h4 code, blockquote code,
+h1 code, h2 code, h3 code, h4 code,
 .archive-month .post,
 .blog-license {
   font-family: 'Georgia', 'Times New Roman', serif;
 }
-code,
+code, blockquote code,
 .blog-title::before, .blog-title::after,
 .blog-power {
   font-family: 'Source Code Pro', Monaco, Console, 'Courier New', monospace;
@@ -124,21 +124,22 @@ body {
   border-color: #CCFF66;
 }
 .article-excerpt blockquote, .article-content blockquote {
-  background-color: #CCCCCC;
-  border-left-width: .5em;
+  background-color: #FFFFFF;
+  border-left-width: 1em;
 }
-.article-excerpt code, .article-content code {
-  border: .2em solid #88B53C;
-  background-color: #222324;
+.article-excerpt p code, .article-content p code,
+.article-excerpt li code, .article-content li code {
+  background-color: #88B53C;
   color: #F8F8F2;
   padding: .1em .4em;
-  border-radius: .5em;
-}
-.article-excerpt code:hover, .article-content code:hover {
-  border-color: #CCFF66;
+  border-radius: .4em;
+  font-size: .8em;
 }
 .article-excerpt .highlight code, .article-content .highlight code {
   border-width: 0;
+}
+.article-excerpt .highlight .text, .article-content .highlight .text {
+  color: #F8F8F2;
 }
 .article-tags a {
   background-color: #88B53C;
