@@ -6,7 +6,7 @@ navigation: true
 {% assign later_mon = "" %}{% for post in site.posts %}{% capture now_mon %}{{ post.date | date:"%B %Y" }}{% endcapture %}{% if later_mon != now_mon %}{% if later_mon != "" %}
     </ul></nav>
   </fieldset></section>
-{% endif %}  <section><fieldset class="page-main page-archive">
+{% endif %}  <section><fieldset class="page-main page-archive archive-month">
     <legend>
       <div>{{ now_mon }}</div>
     </legend>
@@ -24,3 +24,4 @@ navigation: true
       </li>{% endfor %}{% assign later_mon = nil %}{% assign now_mon = nil %}
     </ul></nav>
   </fieldset></section>
+{% include leftbar.html %}{% include rightbar.html %}

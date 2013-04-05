@@ -22,11 +22,4 @@ layout: page
       <a href="/archive.html">Read left {{ posts_left_size }} post{% if posts_left_size > "1" %}s{% endif %}</a>
     </div></nav>{% endif %}{% assign posts_left_size = nil %}
   </div></section>
-  <aside><div class="blog-tags">
-    <nav><ul>{% for tag in site.tags limit:site.limit.tags %}
-      <li>
-        <a href="/tag/{{ tag | first }}.html" class="tag tag-{{ tag | last | size | times:20 | divided_by:site.tags.size }}">{{ tag | first }}</a>
-        <span>({{ tag | last | size }})</span>
-      </li>{% endfor %}
-    </ul></nav>
-  </div></aside>
+{% include leftbar.html %}{% include rightbar.html %}
