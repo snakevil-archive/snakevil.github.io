@@ -1,0 +1,11 @@
+*.*
+/_*/
+
+# git configurations
+!.gitignore
+
+# functional files
+!/README.md
+
+# tags files
+!/*.html
