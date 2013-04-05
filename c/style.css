@@ -38,7 +38,8 @@ code, blockquote code,
   font-family: 'Source Code Pro', Monaco, Console, 'Courier New', monospace;
 }
 p a, time,
-.tag {
+.tag,
+.index-more a {
   font-family: 'Nova Script', cursive;
 }
 .blog-title a {
@@ -152,6 +153,18 @@ body {
 }
 .article-siblings, .article-more {
   color: #88B53C;
+}
+.index-more {
+  padding: .4em 0 1.6em 0;
+  color: #88B53C;
+}
+.index-more::after {
+  content: '➦';
+  font-size: .8em;
+}
+.index-more a {
+  word-spacing: .1em;
+  margin-right: .5em;
 }
 .archive-month legend {
   text-transform: capitalize;
