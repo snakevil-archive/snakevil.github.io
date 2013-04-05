@@ -6,3 +6,7 @@
 	path = s
 	url = git://github.com/snakevil/snakevil.github.com.git
 	branch = static
+[submodule "tags"]
+	path = tag
+	url = git://github.com/snakevil/snakevil.github.com.git
+	branch = tags
