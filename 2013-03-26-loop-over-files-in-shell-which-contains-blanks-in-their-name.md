@@ -16,22 +16,24 @@ tags: ["shell", "git"]
 
 其代码如下：
 
-	cd "${GIT_PREFIX}";
-	maxlen=$(
-		'git' ls-tree --name-only HEAD . | while read file; do
-			'ls' -DF "$file";
-		done | 'wc' -L
-	);
+```sh
+cd "${GIT_PREFIX}";
+maxlen=$(
 	'git' ls-tree --name-only HEAD . | while read file; do
-		[ -e "$file" ] || continue
-		len=$( 'ls' -dF "$file" | 'wc' -c )
-		clen=$( 'ls' -dF --color "$file" | 'wc' -c )
-		[ 's' == "s$('git' log -1 --pretty='%G?' "$file")" ] && \
-			tpl=' ' || \
-			tpl='%C(red normal ul)%G?%Creset'
-		'printf' "%-$( 'expr' $maxlen + $clen - $len )s" "$( 'ls' -dF --color "$file" )"
-		'git' log -1 --pretty=" %C(yellow normal)%h%Creset $tpl %C(white normal)%s%Creset %C(blue normal)[%an]%Creset %C(black normal bold)%ar%Creset" "$file" | 'head'
-	done
+		'ls' -DF "$file";
+	done | 'wc' -L
+);
+'git' ls-tree --name-only HEAD . | while read file; do
+	[ -e "$file" ] || continue
+	len=$( 'ls' -dF "$file" | 'wc' -c )
+	clen=$( 'ls' -dF --color "$file" | 'wc' -c )
+	[ 's' == "s$('git' log -1 --pretty='%G?' "$file")" ] && \
+		tpl=' ' || \
+		tpl='%C(red normal ul)%G?%Creset'
+	'printf' "%-$( 'expr' $maxlen + $clen - $len )s" "$( 'ls' -dF --color "$file" )"
+	'git' log -1 --pretty=" %C(yellow normal)%h%Creset $tpl %C(white normal)%s%Creset %C(blue normal)[%an]%Creset %C(black normal bold)%ar%Creset" "$file" | 'head'
+done
+```
 
 被修正的问题有三：
 

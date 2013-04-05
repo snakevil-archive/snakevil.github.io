@@ -51,27 +51,29 @@ published: false
 
 这两种行为分别意味着与之配套的测试，很传统的 JUnit 测试。
 
-	public class OrderStateTester extends TestCase {
-		private static String TALISKER = "Talisker";
-		private static String HIGHLAND_PARK = "Highland Park";
-		private Warehouse warehouse = new WarehouseImpl();
+```java
+public class OrderStateTester extends TestCase {
+	private static String TALISKER = "Talisker";
+	private static String HIGHLAND_PARK = "Highland Park";
+	private Warehouse warehouse = new WarehouseImpl();
 
-		protected void setUp() throws Exception {
-			warehouse.add(TALISKER, 50);
-			warehouse.add(HIGHLAND_PARK, 25);
-		}
-		public void testOrderIsFilledIfEnoughInWarehouse() {
-			Order order = new Order(TALISKER, 50);
-			order.fill(warehouse);
-			assertTrue(order.isFilled());
-			assertEquals(0, warehouse.getInventory(TALISKER));
-		}
-		public void testOrderDoesNotRemoveIfNotEnough() {
-			Order order = new Order(TALISKER, 51);
-			order.fill(warehouse);
-			assertFalse(order.isFilled());
-			assertEquals(50, warehouse.getInventory(TALISKER));
-		}
+	protected void setUp() throws Exception {
+		warehouse.add(TALISKER, 50);
+		warehouse.add(HIGHLAND_PARK, 25);
+	}
+	public void testOrderIsFilledIfEnoughInWarehouse() {
+		Order order = new Order(TALISKER, 50);
+		order.fill(warehouse);
+		assertTrue(order.isFilled());
+		assertEquals(0, warehouse.getInventory(TALISKER));
+	}
+	public void testOrderDoesNotRemoveIfNotEnough() {
+		Order order = new Order(TALISKER, 51);
+		order.fill(warehouse);
+		assertFalse(order.isFilled());
+		assertEquals(50, warehouse.getInventory(TALISKER));
+	}
+```
 
 xUnit 的测试遵循着一种四步成套的定式：搭建（*setup*）、执行（*exercise*）、验证（*verify*）和拆卸（*teardown*）。在这个案例中，搭建步骤部分由 `setUp` 方法完成（搭建仓库），而另一部分则在测试方法中（搭建订单）。执行步骤完成了对 `order.fill()` 方法地调用，也是我们希望测试地、与被测对象相关的业务逻辑规则。然后是通过断言语句实践地验证步骤，检查执行步骤中被调用的方法是否如期完成了自己的任务。但此示例中并没有实践拆卸步骤，因为垃圾回收机制已经悄悄完成了这一工作。
 
@@ -85,42 +87,44 @@ xUnit 的测试遵循着一种四步成套的定式：搭建（*setup*）、执�
 
 现在我会使用 Mock 对象以完成对同样的行为地测试。我选择了使用 jMock 作为 Mock 对象库以实现测试代码。因为相比其它的 Mock 对象库，jMock 拥有最为明显的优势——由这一方法的发起人开发，并及时更新——便于学习，亦便于理解。
 
-	public class OrderInteractionTester extends MockObjectTestCase {
-		private static String TALISKER = "Talisker";
+```java
+public class OrderInteractionTester extends MockObjectTestCase {
+	private static String TALISKER = "Talisker";
 
-		public void testFillingRemovesInventoryIfInStock() {
-			//setup - data
-			Order order = new Order(TALISKER, 50);
-			Mock warehouseMock = new Mock(Warehouse.class);
+	public void testFillingRemovesInventoryIfInStock() {
+		//setup - data
+		Order order = new Order(TALISKER, 50);
+		Mock warehouseMock = new Mock(Warehouse.class);
 
-			//setup - expectations
-			warehouseMock.expects(once()).method("hasInventory")
-				.with(eq(TALISKER),eq(50))
-				.will(returnValue(true));
-			warehouseMock.expects(once()).method("remove")
-				.with(eq(TALISKER), eq(50))
-				.after("hasInventory");
+		//setup - expectations
+		warehouseMock.expects(once()).method("hasInventory")
+			.with(eq(TALISKER),eq(50))
+			.will(returnValue(true));
+		warehouseMock.expects(once()).method("remove")
+			.with(eq(TALISKER), eq(50))
+			.after("hasInventory");
 
-			//exercise
-			order.fill((Warehouse) warehouseMock.proxy());
+		//exercise
+		order.fill((Warehouse) warehouseMock.proxy());
 
-			//verify
-			warehouseMock.verify();
-			assertTrue(order.isFilled());
-		}
+		//verify
+		warehouseMock.verify();
+		assertTrue(order.isFilled());
+	}
 
-		public void testFillingDoesNotRemoveIfNotEnoughInStock() {
-			Order order = new Order(TALISKER, 51);
-			Mock warehouse = mock(Warehouse.class);
+	public void testFillingDoesNotRemoveIfNotEnoughInStock() {
+		Order order = new Order(TALISKER, 51);
+		Mock warehouse = mock(Warehouse.class);
 
-			warehouse.expects(once()).method("hasInventory")
-				.withAnyArguments()
-				.will(returnValue(false));
+		warehouse.expects(once()).method("hasInventory")
+			.withAnyArguments()
+			.will(returnValue(false));
 
-			order.fill((Warehouse) warehouse.proxy());
+		order.fill((Warehouse) warehouse.proxy());
 
-			assertFalse(order.isFilled());
-		}
+		assertFalse(order.isFilled());
+	}
+```
 
 Concentrate on testFillingRemovesInventoryIfInStock first, as I've taken a couple of shortcuts with the later test.
 
