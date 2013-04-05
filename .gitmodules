@@ -2,7 +2,7 @@
 	path = _posts
 	url = git://github.com/snakevil/snakevil.github.com.git
 	branch = posts
-[submodule "assets"]
-	path = _assets
+[submodule "static"]
+	path = s
 	url = git://github.com/snakevil/snakevil.github.com.git
-	branch = assets
+	branch = static

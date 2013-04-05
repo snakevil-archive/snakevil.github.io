@@ -1,18 +1,18 @@
 #!/bin/sh
 
-[ -d '_assets' -a -d '_posts' ] || {
+[ -d 's' -a -d '_posts' ] || {
   echo 'Sub modules are out of control.'
   exit 1
 }
 
-[ -f '_assets/i/watermark.png' ] || {
+[ -f 's/i/watermark.png' ] || {
   echo 'Watermark is missing.'
   exit 2
 }
 
-'rm' -f _assets/tmp.png > /dev/null 2>&1
+'rm' -f s/tmp.png > /dev/null 2>&1
 
-'ls' _assets/*.png _assets/*.jpg _assets/*.svg 2> /dev/null | \
+'ls' s/*.png s/*.jpg s/*.svg 2> /dev/null | \
   while read file; do
     name=`'basename' "$file"`
     echo "processing \`$name':"
@@ -31,9 +31,9 @@
       realname="$('basename' "$name" ".$ext").png"
       ext='png'
     }
-    tempfile="_assets/tmp.$ext"
-    'composite' -dissolve 38% -gravity center -quality 100 \
-      _assets/i/watermark.png "$file" $tempfile > /dev/null 2>&1
+    tempfile="s/tmp.$ext"
+    'composite' -dissolve 40% -gravity center -quality 100 \
+      s/i/watermark.png "$file" $tempfile > /dev/null 2>&1
     [ 0 -eq $? ] && echo 'succeed' || {
       echo 'failed'
       echo ' SKIPPED for failure of watermarking.'
@@ -51,8 +51,8 @@
     printf '%-31s' "  hashing storage folder..."
     dir="i$('sha1sum' "$tempfile" | 'cut' -c1)"
     echo $dir
-    [ -d "_assets/$dir" ] || {
-      'mkdir' "_assets/$dir" > /dev/null 2>&1
+    [ -d "s/a/$dir" ] || {
+      'mkdir' "s/a/$dir" > /dev/null 2>&1
       [ 0 -eq $? ] || {
         echo ' SKIPPED for failure of folder creation.'
         continue
@@ -63,7 +63,7 @@
       while read file; do
         [ -f "$file.bak" ] || 'cp' -a "$file" "$file.bak"
         'sed' -i -e \
-          "s/]({{ site.asset.url }}\/$name/]({{ site.asset.url }}\/$dir\/$realname/g" \
+          "s/]({{ site.asset.url }}\/$name/]({{ site.asset.url }}\/a\/$dir\/$realname/g" \
           "$file" > /dev/null 2>&1
         [ 0 -eq $? ] || exit 86
       done
@@ -73,7 +73,7 @@
       continue
     }
     printf '%-31s' "  archiving..."
-    'mv' "$tempfile" "_assets/$dir/$realname" && \
+    'mv' "$tempfile" "s/a/$dir/$realname" && \
       'mv' "$file" "$file.bak"
     [ 0 -eq $? ] && echo 'succeed' || {
       echo 'failed'
