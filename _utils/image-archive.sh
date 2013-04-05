@@ -49,7 +49,7 @@
       continue
     }
     printf '%-31s' "  hashing storage folder..."
-    dir="i$('sha1sum' "$tempfile" | 'cut' -c1)"
+    dir="$('sha1sum' "$tempfile" | 'cut' -c1)"
     echo $dir
     [ -d "s/a/$dir" ] || {
       'mkdir' "s/a/$dir" > /dev/null 2>&1
