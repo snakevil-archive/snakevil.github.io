@@ -2,7 +2,7 @@
 layout: post
 title: "囧！ GitHub SSH 临时不能访问"
 date: 2013-04-06 00:31:31+08:00
-tags: ["github"]
+tags: ["github", "ssh", "life-trace"]
 ---
 
 头一遭碰上 [GitHub][] 居然还有不能提交代码地时候…神马情况？！
