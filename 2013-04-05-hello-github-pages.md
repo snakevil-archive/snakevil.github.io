@@ -10,7 +10,7 @@ excerpt: 虽然 scriptogr.am 在 SEO 做得非常不错——三天之内页面�
 
 秀一下在 [GitHub][] 中的贡献活动截图。可惜因为 [GitHub][] 计算规则的原因，所以 **资源** 和 **文章** *分支* 的变更是不被纳入统计地，显示地只是对 **页面模板** 部分的完善次数。
 
-![Contribution Activity]({{ site.asset.url }}/i3/hello-github-pages-1.png)
+![Contribution Activity]({{ site.asset.url }}/a/3/hello-github-pages-1.png)
 
 [GitHub Pages]: https://help.github.com/categories/20/articles
 [Jekyll]: https://github.com/mojombo/jekyll
@@ -22,14 +22,16 @@ excerpt: 虽然 scriptogr.am 在 SEO 做得非常不错——三天之内页面�
 
 1. **页面模板** 部分
 
-	![Commits Snapshot on branch `Master`]({{ site.asset.url }}/i0/hello-github-pages-2.png)
+	![Commits Snapshot on branch `Master`]({{ site.asset.url }}/a/0/hello-github-pages-2.png)
 
 1. **资源**（*图标、样式、脚本…和内容图*） 部分
 
-	![Commits Snapshot on branch `Master`]({{ site.asset.url }}/i1/hello-github-pages-3.png)
+	![Commits Snapshot on branch `Master`]({{ site.asset.url }}/a/1/hello-github-pages-3.png)
 
 1. **文章** 部分
 
-	![Commits Snapshot on branch `Master`]({{ site.asset.url }}/ib/hello-github-pages-4.png)
+	![Commits Snapshot on branch `Master`]({{ site.asset.url }}/a/b/hello-github-pages-4.png)
 
-**资源** *分支* 里， **文章** 用图与 **页面模板** 用图还未分离的问题，打算继续使用 [Git][] 的 `submodule` 功能来搞定。不过这个一时半会也不着急，有空再说吧。
+**资源** *分支* 里， **文章** 用图与 **页面模板** 用图还未分离的问题， ~~打算~~ 继续使用 [Git][] 的 `submodule` 功能来搞定。 ~~不过这个一时半会也不着急，有空再说吧。~~ 已火速搞定！
+
+[Git]: https://git.wiki.kernel.org/index.php/Git_FAQ
