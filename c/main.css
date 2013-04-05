@@ -1,3 +1,4 @@
+/* Essential {{{1 */
 body {
   margin: 0;
   line-height: 1;
@@ -32,6 +33,16 @@ fieldset, legend, ol, ul, blockquote {
   margin: 0;
   padding: 0;
 }
+legend {
+  width: 100%;
+  white-space: nowrap;
+  text-transform: uppercase;
+  font-size: 1.2em;
+  padding-top: .4em;
+  padding-bottom: .3em;
+  text-indent: 14%;
+  font-weight: bold;
+}
 ol, ul {
   list-style: none;
 }
@@ -41,7 +52,6 @@ p {
 a::before, a::after {
   font-size: .6em;
 }
-
 .post::before {
   content: '《';
 }
@@ -51,7 +61,8 @@ a::before, a::after {
 .tag::before {
   content: '#';
 }
-.tag-6, .tag-7, .tag-8, .tag-9, .tag-10, .tag-11, .tag-12, .tag-13, .tag-14, .tag-15, .tag-16, .tag-17, .tag-18, .tag-19, .tag-20 {
+.tag-6, .tag-7, .tag-8, .tag-9, .tag-10, .tag-11, .tag-12, .tag-13, .tag-14,
+.tag-15, .tag-16, .tag-17, .tag-18, .tag-19, .tag-20 {
   font-size: 1.4em;
 }
 .tag-4, .tag-5 {
@@ -63,28 +74,31 @@ a::before, a::after {
 .tag-0, .tag-1 {
   font-size: .8em;
 }
+/* }}}1 */
 
+/* Common Layouts {{{1 */
 .page-header, .page-footer {
   z-index: 1;
 }
 .page-main {
-  margin-left: 19%;
-  margin-right: 19%;
+  margin-left: 20%;
+  margin-right: 20%;
 }
 .page-article {
   margin-top: 2em;
   margin-bottom: 2em;
 }
-.page-archive legend {
-  font-weight: bold;
-  width: 100%;
+.page-leftbar, .page-rightbar {
+  position: fixed;
+  top: 12em;
+  width: 19%;
 }
-.page-archive legend div {
-  font-size: 3em;
-  margin: 0 24% 0 14%;
-  padding: .6em 0 .4em 9%;
+.page-leftbar {
+  left: 0;
 }
-
+.page-rightbar {
+  right: 0;
+}
 .blog-brief {
   font-style: oblique;
   padding: 1em 19%;
@@ -112,24 +126,6 @@ a::before, a::after {
   display: inline;
   padding: 0 .6em;
 }
-.blog-tags {
-  position: fixed;
-  top: 11em;
-  left: 1%;
-  width: 17%;
-  text-align: right;
-}
-.blog-tags li {
-  line-height: 1.5;
-  display: inline;
-}
-.blog-tags a {
-  white-space: nowrap;
-  text-transform: capitalize;
-}
-.blog-tags span {
-  font-size: .6em;
-}
 .blog-power {
   font-size: .8em;
   padding: .9em 0 .6em 0;
@@ -147,7 +143,9 @@ a::before, a::after {
   position: relative;
   top: .1em;
 }
+/* }}}1 */
 
+/* Post Page {{{1 */
 .article-time {
   padding: 0.5em 19%;
   text-align: right;
@@ -218,7 +216,18 @@ a::before, a::after {
 .article-excerpt blockquote, .article-content blockquote {
   padding: .5em 1em;
 }
+/* }}}1 */
 
+/* Archive Page {{{1 */
+.archive-month legend {
+  padding: 0;
+  text-indent: 0;
+}
+.archive-month legend div {
+  font-size: 3em;
+  margin: 0 38% 0 0;
+  padding: .6em 0 .4em 0;
+}
 .archive-posts li {
   margin: .5em 0;
 }
@@ -243,3 +252,24 @@ a::before, a::after {
   text-transform: capitalize;
   font-size: 1em;
 }
+/* }}}1 */
+
+/* Plugin Tags Cloud {{{1 */
+.plugin-tags-cloud {
+}
+.plugin-tags-cloud ul {
+  margin-left: 7%;
+  text-align: right;
+}
+.plugin-tags-cloud li {
+  line-height: 1.5;
+  display: inline;
+}
+.plugin-tags-cloud a {
+  white-space: nowrap;
+  text-transform: capitalize;
+}
+.plugin-tags-cloud span {
+  font-size: .6em;
+}
+/* }}}1 */
