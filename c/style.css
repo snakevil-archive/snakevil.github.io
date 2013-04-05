@@ -2,25 +2,25 @@
   font-family: 'Almendra';
   font-style: normal;
   font-weight: 700;
-  src: local('Almendra Bold'), local('Almendra-Bold'), url(http://themes.googleusercontent.com/static/fonts/almendra/v5/7uClDfLGor3AEOOxrUeUhrrIa-7acMAeDBVuclsi6Gc.woff) format('woff');
+  src: local('Almendra Bold'), local('Almendra-Bold'), url(https://s.szen.in/f/almendra-v5-normal-700.woff) format('woff');
 }
 @font-face {
   font-family: 'Arizonia';
   font-style: normal;
   font-weight: 400;
-  src: local('Arizonia'), local('Arizonia-Regular'), url(http://themes.googleusercontent.com/static/fonts/arizonia/v3/8Usm7f8XTsZinW2e-ZMd5XYhjbSpvc47ee6xR_80Hnw.woff) format('woff');
+  src: local('Arizonia'), local('Arizonia-Regular'), url(https://s.szen.in/f/arizondia-v3-normal-400.woff) format('woff');
 }
 @font-face {
   font-family: 'Source Code Pro';
   font-style: normal;
   font-weight: 400;
-  src: local('Source Code Pro'), local('SourceCodePro-Regular'), url(http://themes.googleusercontent.com/static/fonts/sourcecodepro/v3/mrl8jkM18OlOQN8JLgasD9Hq-FFgoDNV3GTKpHwuvtI.woff) format('woff');
+  src: local('Source Code Pro ExtraLight'), local('SourceCodePro-ExtraLight'), url(https://s.szen.in/f/sourcecodepro-v3-normal-200.woff) format('woff');
 }
 @font-face {
   font-family: 'Nova Script';
   font-style: normal;
   font-weight: 400;
-  src: local('Nova Script'), local('NovaScript'), url(http://themes.googleusercontent.com/static/fonts/novascript/v5/NQ86E43l_oCMF8Cvg62jaLrIa-7acMAeDBVuclsi6Gc.woff) format('woff');
+  src: local('Nova Script'), local('NovaScript'), url(https://s.szen.in/f/novascript-v5-normal-400.woff) format('woff');
 }
 
 body {
@@ -126,6 +126,19 @@ body {
 .article-excerpt blockquote, .article-content blockquote {
   background-color: #CCCCCC;
   border-left-width: .5em;
+}
+.article-excerpt code, .article-content code {
+  border: .2em solid #88B53C;
+  background-color: #222324;
+  color: #F8F8F2;
+  padding: .1em .4em;
+  border-radius: .5em;
+}
+.article-excerpt code:hover, .article-content code:hover {
+  border-color: #CCFF66;
+}
+.article-excerpt .highlight code, .article-content .highlight code {
+  border-width: 0;
 }
 .article-tags a {
   background-color: #88B53C;
