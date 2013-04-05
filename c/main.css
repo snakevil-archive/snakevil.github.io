@@ -104,9 +104,6 @@ pre code {
 /* }}}1 */
 
 /* Common Layouts {{{1 */
-.page-header, .page-footer {
-  z-index: 1;
-}
 .page-main {
   margin-left: 20%;
   margin-right: 20%;
@@ -117,7 +114,7 @@ pre code {
 }
 .page-leftbar, .page-rightbar {
   position: absolute;
-  z-index: -1;
+  z-index: 1;
   top: 10em;
   width: 19%;
 }
