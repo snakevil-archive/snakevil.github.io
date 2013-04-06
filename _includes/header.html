@@ -6,7 +6,7 @@
   <title>{% case page.type %}{% when 'tag' %}Posts with Tag "{{ page.tag | capitalize }}" - {{ site.title | capitalize }}{% when 'month' %}Posts in {{ page.month | date_to_long_string }} - {{ site.title | capitalize }}{% when 'index' %}{{ site.title | capitalize }} -- {{ site.author.name | capitalize }}'s blog{% else %}{{ page.title | capitalize }} - {{ site.title | capitalize }}{% endcase %}</title>
 {% if site.services.google.webmaster.site-verification %}{% include plugins/google-webmaster.html %}{% endif %}  <meta name="author" content="{{ site.author.name }}" />
   <meta name="keywords" content="{{ site.author.name }},{{ site.title }},Technical Blog,Architect,GNU Linux,Geek Blog,Mac OS X" />
-  <meta name="description" content="{{ site.title }}, is a personal blog of {{ site.author.name }}, focus on engineering technology, geek favors and home console entertainment." />
+  <meta name="description" content="{% if page.excerpt %}{{ page.excerpt | capitalize | replace:'"',"'" }}{% elsif 'tag' == page.type %}This page lists all posts with the tag '{{ page.tag | replace:'"','\"' }}' in {{ site.title | upcase | replace:'"',"'" }}，{{ site.author.name | replace:'"',"'" }}'s blog.{% elsif 'month' == page.type %}This page lists all posts in {{ page.month | date_to_long_string }} in {{ site.title | upcase | replace:'"',"'" }}，{{ site.author.name | replace:'"',"'" }}'s blog.{% elsif site.excerpt %}{{ site.excerpt | replace:'"',"'" }}{% else %}{{ site.title | upcase | replace:'"',"'" }} is {{ site.author.name | replace:'"',"'" }}'s blog.{% endif %}" />
   <meta name="creator" content="{{ site.author.name }}" />
   <meta name="publisher" content="{{ site.author.name }}" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
