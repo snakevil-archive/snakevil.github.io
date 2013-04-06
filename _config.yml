@@ -25,7 +25,10 @@ limit:
   rss: 36
 asset:
   url: "https://s.szen.in"
-analytics:
+services:
   google:
-    id: "UA-39915276-1"
-    account: "szen.in"
+    analytics:
+      id: "UA-39915276-1"
+      account: "szen.in"
+    webmaster:
+      site-verification: "bzzioVVz75GQoaHvBjZ1Ks6nl4pSSGlkpc-gfV4elYM"

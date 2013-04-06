@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta http-equiv="Content-Type" content="text/html; Charset=utf-8"/>
   <title>{{ site.title }}{% if page.title %} - {{ page.title }}{% endif %}</title>
-  <meta name="author" content="{{ site.author.name }}" />
+{% if site.services.google.webmaster.site-verification %}{% include plugins/google-webmaster.html %}{% endif %}  <meta name="author" content="{{ site.author.name }}" />
   <meta name="keywords" content="{{ site.author.name }},{{ site.title }},Technical Blog,Architect,GNU Linux,Geek Blog,Mac OS X" />
   <meta name="description" content="{{ site.title }}, is a personal blog of {{ site.author.name }}, focus on engineering technology, geek favors and home console entertainment." />
   <meta name="creator" content="{{ site.author.name }}" />
