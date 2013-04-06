@@ -43,7 +43,7 @@
       <a href="http://about.me/{{ site.author.aboutme }}" target="_blank">{{ site.author.name }}</a>
       <span> restarted in 2013</span>
     </div>
-    <nav><ul class="blog-pages">{% for fpage in site.pages %}{% if fpage.navigation and fpage.title != page.title %}
+    <nav><ul class="blog-pages">{% for fpage in site.pages %}{% if 'page' == fpage.type %}
       <li>
         <a href="{{ fpage.url }}" title="{{ fpage.title }}">{{ fpage.title }}</a>
       </li>{% endif %}{% endfor %}
