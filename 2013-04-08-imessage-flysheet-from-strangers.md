@@ -1,7 +1,8 @@
 ---
 layout: post
 title: 也开始有 IMessage 消息广告了
-tags: ["product-promotion","imessage","message-flysheet"]
+date: 2013-04-08 21:11:46+08:00
+tags: ["product-promotion", "imessage", "message-flysheet"]
 excerpt: 今天第二次收到自于陌生人的 IMessage 消息，内容是一个 App 地推广广告。不过相比第一次的小额无抵押借贷广告而言，至少不是那么地无厘头，也让我能有兴趣连一下其中的链接。发散想到一些与产品推广相关的东西，记录下来。
 ---
 
