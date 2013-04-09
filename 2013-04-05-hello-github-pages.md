@@ -37,6 +37,6 @@ excerpt: 虽然 scriptogr.am 在 SEO 做得非常不错——三天之内页面�
 *<ins datetime="2013-04-05 23:46:00+08:00">唉！</ins> [Markdown][] 啥时候能像 [W3C][] 一样与时俱进，支持 `<del/>` 和 `<ins/>` 这样的 [HTML5][] 新标签呢？！*
 
 [Git]: https://git.wiki.kernel.org/index.php/Git_FAQ
-[Markdown]: daringfireball.net/projects/markdown/syntax
+[Markdown]: http://daringfireball.net/projects/markdown/syntax
 [W3C]: http://www.w3.org
 [HTML5]: https://developer.mozilla.org/en-US/docs/HTML/HTML5
