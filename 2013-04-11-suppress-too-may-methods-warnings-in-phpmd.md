@@ -28,7 +28,7 @@ excerpt: 这两天在重构 Tox 中的 Pdo 部分，但一直困扰于 PHPMD 的
 
 因此在 [Tox][] 的 [`etc/phpmd.xml`](https://github.com/php-tox/tox/blob/master/etc/phpmd.xml) 中我是这么写地：
 
-```xml
+{% highlight xml linenos=table %}
   <rule ref="rulesets/codesize.xml/TooManyMethods">
     <properties>
       <property name="ignorepattern"
@@ -37,7 +37,7 @@ excerpt: 这两天在重构 Tox 中的 Pdo 部分，但一直困扰于 PHPMD 的
       />
     </properties>
   </rule>
-```
+{% endhighlight %}
 
 重新再跑 [PHPMD][]，数量就从原来的 **18** 降到了 **12** ，效果显著。
 

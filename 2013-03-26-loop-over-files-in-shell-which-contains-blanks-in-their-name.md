@@ -7,7 +7,7 @@ tags: ["shell", "git"]
 
 近期在 [Git][] 全局配置中新增了一个仿 `ls` 的别名，使用 shell 实现，其显示效果类似于 [GitHub][] 。但在处理带空格的文件时，发现一些问题。因此又做了一些修正。
 
-![Sample of Git `LS`]({{ site.asset.url }}/a/c/sample-of-git-ls.png)
+![Sample of Git `LS`](/s/a/c/sample-of-git-ls.png)
 
 [Git]: https://git.wiki.kernel.org/index.php/Git_FAQ
 [GitHub]: https://github.com
@@ -16,7 +16,7 @@ tags: ["shell", "git"]
 
 其代码如下：
 
-```sh
+{% highlight sh linenos=table %}
 cd "${GIT_PREFIX}";
 maxlen=$(
 	'git' ls-tree --name-only HEAD . | while read file; do
@@ -33,7 +33,7 @@ maxlen=$(
 	'printf' "%-$( 'expr' $maxlen + $clen - $len )s" "$( 'ls' -dF --color "$file" )"
 	'git' log -1 --pretty=" %C(yellow normal)%h%Creset $tpl %C(white normal)%s%Creset %C(blue normal)[%an]%Creset %C(black normal bold)%ar%Creset" "$file" | 'head'
 done
-```
+{% endhighlight %}
 
 被修正的问题有三：
 

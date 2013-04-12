@@ -5,7 +5,7 @@ date: 2013-03-25 12:09:00+08:00
 tags: ["git", "gnupg", "gnupg2", "gpg", "pinentry-curses"]
 ---
 
-前几天为了进一步保障 [Git][] 版本的可靠性，加上了 [gpg][GnuPG][^1] 的签名。
+前几天为了进一步保障 [Git][] 版本的可靠性，加上了 [gpg][GnuPG] 的签名。
 
 当时在 [MacPorts][] 中选择的 [GnuPG][] 版本是较新的 `gnupg2 @2.0.19` 。结果每次在做 `git commit -veS` 操作时都会碰到这样的问题：
 
@@ -23,8 +23,6 @@ tags: ["git", "gnupg", "gnupg2", "gpg", "pinentry-curses"]
     gpg: signal Interrupt caught ... exiting
 
 网上找了很久，都没有对应的资料。但这么玩的哥们绝对多到不行，为什么会没有问题呢？
-
-[^1]: `gpg`全名`The GNU Privacy Guard`，是 [GNU](http://www.gnu.org) 版本的 `pgp`（`Pretty Good Privacy`）。
 
 [Git]: https://git.wiki.kernel.org/index.php/Git_FAQ
 [GnuPG]: http://gnupg.org

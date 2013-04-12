@@ -7,7 +7,7 @@ tags: ["github", "ssh", "life-trace"]
 
 头一遭碰上 [GitHub][] 居然还有不能提交代码地时候…神马情况？！
 
-![GitHub SSH access temporarily unavaible]({{ site.asset.url }}/a/8/github-ssh-access-temporarily-unavailable-1.png)
+![GitHub SSH access temporarily unavaible](/s/a/8/github-ssh-access-temporarily-unavailable-1.png)
 
 [GitHub]: https://github.com
 
@@ -15,4 +15,4 @@ tags: ["github", "ssh", "life-trace"]
 
 过了半个小时，我把问题都解决了，再尝试，就发现恢复了。
 
-![GitHub SSH access recovered]({{ site.asset.url }}/a/b/github-ssh-access-temporarily-unavailable-2.png)
+![GitHub SSH access recovered](/s/a/b/github-ssh-access-temporarily-unavailable-2.png)

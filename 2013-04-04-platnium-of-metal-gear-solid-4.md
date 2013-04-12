@@ -9,7 +9,7 @@ tags: ["game-trace", "playstation", "ps3", "metal-gear-solid", "mgs4"]
 
 **我终于把《合金装备4》白金了 T_T**
 
-![Snapshot of Platnium throphy]({{ site.asset.url }}/a/7/platnium-of-metal-gear-solid-4-1.png)
+![Snapshot of Platnium throphy](/s/a/7/platnium-of-metal-gear-solid-4-1.png)
 
 <!--{{ site.title }}-->
 
@@ -19,10 +19,10 @@ tags: ["game-trace", "playstation", "ps3", "metal-gear-solid", "mgs4"]
 
 幸而今早起来开机就自动进入游戏成功，没真让我再去临时租一盘回来！
 
-[![Snapshot of Trophy Card]({{ site.asset.url }}/a/b/platnium-of-metal-gear-solid-4-2.png)](http://ps3trophies.com/trophies/03485-metal-gear-solid-4/SNakeVil)
+[![Snapshot of Trophy Card](/s/a/b/platnium-of-metal-gear-solid-4-2.png)](http://ps3trophies.com/trophies/03485-metal-gear-solid-4/SNakeVil)
 
 吐槽一下 PSN 等级过了 12 级好难升啊！尼玛拿一个白金奖杯也就增加了 **5%** 左右的进度…仰望排在前面的 14,637 位哥们，你们都是专家！
 
 下一个奋斗目标，是《死亡空间3》。这也是个坑爹货… M+N 多的必需对战奖杯！这么小众的游戏，奖杯设计的口味这么重…
 
-[![Snapshot of boosting Platnium]({{ site.asset.url }}/a/7/platnium-of-metal-gear-solid-4-3.png)](http://ps3trophies.com/trophies/03808-dead-space-3/SNakeVil)
+[![Snapshot of boosting Platnium](/s/a/7/platnium-of-metal-gear-solid-4-3.png)](http://ps3trophies.com/trophies/03808-dead-space-3/SNakeVil)
