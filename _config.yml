@@ -5,7 +5,7 @@ exclude:
   - README.md
 url: "https://szen.in"
 baseurl: /
-markdown: redcarpet
+markdown: rdiscount
 pygments: true
 lsi: false
 permalink: /:year/:month/:title.html
@@ -18,7 +18,6 @@ author:
   twitter: snakevil
   facebook: snakevil.zen
   aboutme: snakevil.zen
-  disqus: snakevil
 excerpt: "\"MOLTING EVERYDAY\"，原『天天蜕皮的大蛇』，是 Snakevil Zen 的个人博客。聚焦于研发技术、互联网络和家用机游戏，也附带一些 GEEK 向的趣闻逸事。"
 limit:
   index: 6
