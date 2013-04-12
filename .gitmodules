@@ -1,12 +1,12 @@
 [submodule "posts"]
 	path = _posts
-	url = git://github.com/snakevil/snakevil.github.com.git
+	url = git://github.com/snakevil/snakevil.github.io.git
 	branch = posts
 [submodule "static"]
 	path = s
-	url = git://github.com/snakevil/snakevil.github.com.git
+	url = git://github.com/snakevil/snakevil.github.io.git
 	branch = static
 [submodule "tags"]
 	path = tag
-	url = git://github.com/snakevil/snakevil.github.com.git
+	url = git://github.com/snakevil/snakevil.github.io.git
 	branch = tags
