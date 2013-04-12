@@ -1,6 +1,15 @@
 ---
 layout: archive
 title: Archive
-type: page
+kind: page
 navigation: true
 ---
+    <section><div class="page-main">
+      <div class="page-nav blog-archive">
+        <nav><ul>
+          <li>
+            <span>Archive</span>
+          </li>
+        </ul></nav>
+      </div>
+{% for post in site.posts %}{% include main-post.html %}{% endfor %}    </div></section>

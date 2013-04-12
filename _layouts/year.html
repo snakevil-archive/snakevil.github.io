@@ -1,0 +1,12 @@
+---
+layout: archive
+---
+    <section><div class="page-main">
+      <div class="page-nav blog-month">
+        <nav><ul>
+          <li>
+            <span>{{ page.date | date:'%Y' }}</span>
+          </li>
+        </ul></nav>
+      </div>
+{% capture var_expected_year %}{{ page.date | date:'%Y' }}{% endcapture %}{% for post in site.posts %}{% capture var_post_year %}{{ post.date | date:'%Y' }}{% endcapture %}{% if var_post_year == var_expected_year %}{% include main-post.html %}{% endif %}{% endfor %}{% assign var_post_year = nil %}{% assign var_expected_year = nil %}    </div></section>

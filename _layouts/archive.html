@@ -1,25 +1,5 @@
 ---
 layout: page
 ---
-{% if page.tag %}{% assign posts = site.tags[page.tag] %}{% else %}{% assign posts = site.posts %}{% endif %}{% assign later_mon = "" %}{% for post in posts %}{% capture now_mon %}{{ post.date | date:"%B %Y" }}{% endcapture %}{% if later_mon != now_mon %}{% if later_mon != "" %}
-    </ul></nav>
-  </fieldset></section>
-{% endif %}  <section><fieldset class="page-main page-archive archive-month">
-    <legend>
-      <div>{{ now_mon }}</div>
-    </legend>
-    <nav><ul class="archive-posts">{% assign later_mon = now_mon %}{% endif %}
-      <li>
-        <div>
-          <a class="post" href="{{ post.url }}">{{ post.title }}</a>
-          <time pubdate="true" datetime="{{ post.date | date_to_xmlschema }}"> in {% capture day_of_month %}{{ post.date | date:"%d" }}{% endcapture %}{{ day_of_month }}{% case day_of_month %}{% when '01' or '21' or '31' %}st{% when '02' or '22' %}nd{% when '03' or '23' %}rd{% else %}th{% endcase %}</time>{% assign day_of_month = nil %}
-        </div>{% capture tags_size %}{{ post.tags | size }}{% endcapture %}{% if tags_size != "0" %}
-        <nav><ul class="archive-tags">{% for tag in post.tags %}
-          <li>
-            <a class="tag" href="/tag/{{ tag }}.html">{{ tag }}</a>
-          </li>{% endfor %}
-        </ul></nav>{% endif %}{% assign tags_size = nil %}
-      </li>{% endfor %}{% assign later_mon = nil %}{% assign now_mon = nil %}
-    </ul></nav>
-  </fieldset></section>
-{% include leftbar.html %}{% include rightbar.html %}
+{% include sidebar.html %}
+{{ content }}

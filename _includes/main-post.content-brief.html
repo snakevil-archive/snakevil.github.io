@@ -1,0 +1,3 @@
+{% if post.excerpt %}        <section />{% else %}        <section><div class="post-content">
+{{ post.content | newline_to_br | split:'<br />' | first }}
+        </div></section>{% endif %}

@@ -1,0 +1,15 @@
+---
+layout: archive
+---
+    <section><div class="page-main">
+      <div class="page-nav blog-tag">
+        <nav><ul>
+          <li>
+            <a href="/tags.html" target="_top">Tag</a>
+          </li>
+          <li>
+            <span>{{ page.tag | replace:'-',' ' | capitalize }}</span>
+          </li>
+        </ul></nav>
+      </div>
+{% for post in site.tags[page.tag] %}{% include main-post.html %}{% endfor %}    </div></section>

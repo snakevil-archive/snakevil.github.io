@@ -17,7 +17,7 @@
     name=`'basename' "$file"`
     echo "processing \`$name':"
     printf '%-31s' "  checking references..."
-    phrase="]({{ site.asset.url }}/$name"
+    phrase="](/s/$name"
     refcnt=`'grep' -F "$phrase" _posts/20??-??-??-*.md | 'wc' -l`
     echo $refcnt
     [ 0 -ne $refcnt ] || {
@@ -63,7 +63,7 @@
       while read file; do
         [ -f "$file.bak" ] || 'cp' -a "$file" "$file.bak"
         'sed' -i -e \
-          "s/]({{ site.asset.url }}\/$name/]({{ site.asset.url }}\/a\/$dir\/$realname/g" \
+          "s/](\/s\/$name/](\/s\/a\/$dir\/$realname/g" \
           "$file" > /dev/null 2>&1
         [ 0 -eq $? ] || exit 86
       done

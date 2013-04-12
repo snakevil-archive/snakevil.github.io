@@ -1,0 +1,15 @@
+---
+layout: archive
+---
+    <section><div class="page-main">
+      <div class="page-nav blog-month">
+        <nav><ul>
+          <li>
+            <a href="/month/{{ page.date | date:'%Y' }}.html" target="_top">{{ page.date | date:'%Y' }}</a>
+          </li>
+          <li>
+            <span>{{ page.date | date:'%B' }}</span>
+          </li>
+        </ul></nav>
+      </div>
+{% capture var_expected_month %}{{ page.date | date:'%Y%m' }}{% endcapture %}{% for post in site.posts %}{% capture var_post_month %}{{ post.date | date:'%Y%m' }}{% endcapture %}{% if var_post_month == var_expected_month %}{% include main-post.html %}{% endif %}{% endfor %}{% assign var_post_month = nil %}{% assign var_expected_month = nil %}    </div></section>

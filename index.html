@@ -1,26 +1,11 @@
 ---
-layout: page
-type: index
+layout: archive
+kind: index
 ---
-  <section><div class="page-main">{% for post in site.posts limit:site.limit.index %}
-    <article><div class="page-article">
-      <header><div class="article-header">
-        <h1><a class="post" href="{{ post.url }}">{{ post.title }}</a></h1>
-        <div class="article-time">
-          <time pubdate="true" datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date_to_long_string }}</time>{% for tag in post.tags %}
-          <a class="tag" href="/tag/{{ tag }}.html">{{ tag }}</a>{% endfor %}
-        </div>{% if post.excerpt %}
-        <div class="article-excerpt">
-{{ post.excerpt | markdownify }}        </div>{% endif %}
-      </div></header>
-      <section><div class="article-content">
-{{ post.content | split:"<!--"site.title"-->" | first | markdownify }}      </div></section>{% capture post_left_size %}{{ post.content | split:"<!--"site.title"-->" | size }}{% endcapture %}{% if post_left_size > "1" %}
-      <footer><div class="article-footer">
-        <p class="article-more">……</p>
-      </div></footer>{% endif %}{% assign post_left_size = nil %}
-    </div></article>{% endfor %}{% capture posts_left_size %}{{ site.posts | size | minus:site.limit.index }}{% endcapture %}{% if posts_left_size > "0" %}
-    <nav><div class="index-more">
-      <a href="/archive.html">Read {{ posts_left_size }} left post{% if posts_left_size > "1" %}s{% endif %}</a>
-    </div></nav>{% endif %}{% assign posts_left_size = nil %}
-  </div></section>
-{% include leftbar.html %}{% include rightbar.html %}
+    <section><div class="page-main">
+{% for post in site.posts limit:site.limit.index %}{% include main-post.html %}{% endfor %}{% if site.limit.index %}{% capture tmp_site_posts_length_extra %}{{ site.posts | size | minus:site.limit.index }}{% endcapture %}{% if tmp_site_posts_length_extra > "0" %}      <aside><div>
+        <nav><div class="index-more">
+          <a href="/archive.html" target="_parent">Read {{ tmp_site_posts_length_extra }} left post{% if tmp_site_posts_length_extra > "1" %}s{% endif %}</a>
+        </div></nav>
+      </div></aside>{% endif %}{% assign tmp_site_posts_length_extra = nil %}{% endif %}
+    </div></section>

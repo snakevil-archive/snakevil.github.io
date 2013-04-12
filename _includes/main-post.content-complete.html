@@ -1,0 +1,25 @@
+      <section><div class="post-content" itemprop="articleBody">
+{{ content }}      </div></section>
+      <footer><div class="post-footer">
+{% if post.next or post.previous %}        <fieldset class="post-siblings">
+          <legend>Siblings</legend>
+          <nav><ul>
+            <li class="post-next">{% if post.next %}
+              <a class="post" href="{{ post.next.url }}" target="_top">{{ post.next.title }}</a>{% else %}
+              <a href="/" target="_top">Index</a>{% endif %}
+            </li>
+            <li class="post-previous">{% if post.previous %}
+              <a class="post" href="{{ post.previous.url }}" target="_top">{{ post.previous.title }}</a>{% else %}
+              <a href="/archive.html" target="_top">Archive</a>{% endif %}
+            </li>
+          </ul></nav>
+        </fieldset>{% endif %}
+{% if site.services.disqus.id %}{% include plugins/disqus-thread.html %}{%else%}        <fieldset class="post-recommended">
+          <legend>Recommended</legend>
+          <nav><ul>{% capture var_related_max %}{% if site.limit.recommendation %}{{ site.limit.recommendation }}{% else %}8{% endif %}{% endcapture %}{% assign var_related_count = '0' %}{% for var_post in site.related_posts %}{% if var_post.url != post.previous.url and var_post.url != post.next.url and var_related_count != var_related_max %}{% capture var_related_count %}{{ var_related_count | plus:'1' }}{% endcapture %}
+            <li>
+              <a href="{{ var_post.url }}" class="post" target="_top">{{ var_post.title }}</a>
+            </li>{% endif %}{% endfor %}{% assign var_related_count = nil %}{% assign var_related_max = nil %}
+          </ul></nav>
+        </fieldset>
+{% endif %}      </div></footer>

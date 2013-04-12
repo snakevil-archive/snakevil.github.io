@@ -5,7 +5,7 @@ exclude:
   - README.md
 url: "https://szen.in"
 baseurl: /
-markdown: rdiscount
+markdown: kramdown
 pygments: true
 lsi: false
 permalink: /:year/:month/:title.html
@@ -14,15 +14,25 @@ title: "Molting Everyday"
 author:
   name: "Snakevil Zen"
   email: "zsnakevil@gmail.com"
-  github: snakevil
   twitter: snakevil
-  facebook: snakevil.zen
   aboutme: snakevil.zen
-excerpt: "\"MOLTING EVERYDAY\"，原『天天蜕皮的大蛇』，是 Snakevil Zen 的个人博客。聚焦于研发技术、互联网络和家用机游戏，也附带一些 GEEK 向的趣闻逸事。"
+  google:
+    plus: 114548287532214210712
+excerpt: "MOLTING EVERYDAY，原『天天蜕皮的大蛇』，是 Snakevil Zen 的个人博客。聚焦于研发技术、互联网络和家用机游戏，也附带一些 GEEK 向的趣闻逸事。"
+keywords:
+  - "Mac OS X"
+  - "Geek"
+  - "奇客"
+  - "TV Entertainment"
+  - "电玩"
+  - "PHP"
+  - "GNU"
+  - "Architecture"
+  - "架构"
 limit:
-  index: 6
-  tags: 36
+  index: 5
   rss: 36
+  recommendation: 6
 asset:
   url: "https://s.szen.in"
 services:
@@ -30,5 +40,7 @@ services:
     analytics:
       id: "UA-39915276-1"
       account: "szen.in"
-    webmaster:
-      site-verification: "bzzioVVz75GQoaHvBjZ1Ks6nl4pSSGlkpc-gfV4elYM"
+  disqus:
+    id: snakevil
+  twitter:
+    id: 323060021409746944

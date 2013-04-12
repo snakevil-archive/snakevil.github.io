@@ -1,36 +1,15 @@
-{% include header.html %}  <article><div class="page-main page-article">
-    <header><div class="article-header">
-      <h1 class="post">{{ page.title }}</h1>
-      <div class="article-time">
-        <time pubdate="true" datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date_to_long_string }}</time>
-      </div>{% if page.excerpt %}
-      <div class="article-excerpt">
-{{ page.excerpt | markdownify }}      </div>{% endif %}
-    </div></header>
-    <section><div class="article-content">
-{{ content | markdownify }}    </div></section>
-    <footer><div class="article-footer">{% capture tags_size %}{{ page.tags | size }}{% endcapture %}{% if tags_size != "0" %}
-      <fieldset class="article-tags">
-        <legend>Tags</legend>
-        <nav><ul>{% for tag in page.tags %}
-          <li>
-            <a class="tag" href="/tag/{{ tag }}.html" title="{{ tag }}">{{ tag }}</a>
-          </li>{% endfor %}
-        </ul></nav>
-      </fieldset>{% endif %}{% assign tags_size = nil %}{% if page.next or page.previous %}
-      <fieldset class="article-siblings">
-        <legend>Siblings</legend>
-        <nav><ul>
-          <li class="article-next">{% if page.next %}
-            <a class="post" href="{{ page.next.url }}">{{ page.next.title }}</a>{% else %}
-            <a href="/">Index</a>{% endif %}
-          </li>
-          <li class="article-previous">{% if page.previous %}
-            <a class="post" href="{{ page.previous.url }}">{{ page.previous.title }}</a>{% else %}
-            <a href="/archive.html">Archive</a>{% endif %}
-          </li>
-        </ul></nav>
-      </fieldset>{% endif %}{% if site.author.disqus %}
-{% include plugins/disqus-thread.html %}{% endif %}    </div></footer>
-  </div></article>
-{% include footer.html %}
+---
+layout: page
+---
+  <section><div class="page-main">
+    <div class="page-nav">
+      <nav><ul>
+        <li>
+          <a href="/month/{{ page.date | date:'%Y' }}.html" target="_top">{{ page.date | date:'%Y' }}</a>
+        </li>
+        <li>
+          <a href="/month/{{ page.date | date:'%Y-%m' }}.html" target="_top">{{ page.date | date:'%B' }}</a>
+        </li>
+      </ul></nav>
+    </div>
+{% assign post = page %}{% include main-post.html %}  </div></section>

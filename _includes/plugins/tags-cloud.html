@@ -1,9 +1,0 @@
-    <section><fieldset class="plugin-tags-cloud">
-      <legend>Tags Cloud</legend>
-      <nav><ul>{% for tag in site.tags limit:site.limit.tags %}
-        <li>
-          <a href="/tag/{{ tag | first }}.html" class="tag tag-{{ tag | last | size | times:20 | divided_by:site.tags.size }}">{{ tag | first }}</a>
-          <span>({{ tag | last | size }})</span>
-        </li>{% endfor %}
-      </ul></fieldset>
-    </div></section>

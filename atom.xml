@@ -3,20 +3,22 @@ layout: nil
 ---
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title>{{ site.title }}</title>
+  <title><![CDATA[{{ site.title }}]]></title>
   <link rel="self" href="{{ site.url }}{{ page.url }}"/>
   <link href="{{ site.url }}"/>
   <updated>{{ site.time | date_to_xmlschema }}</updated>
   <id>{{ site.url }}</id>
   <author>
-    <name>{{ site.author.name }}</name>
-    <email>{{ site.author.email }}</email>
-  </author>{% for post in site.posts limit:site.limit.rss %}
+    <name><![CDATA[{{ site.author.name }}]]></name>{% if site.author.email %}
+    <email><![CDATA[{{ site.author.email }}]]></email>{% endif %}
+  </author>{% capture var_posts_max %}{% if site.limit.rss %}{{ site.limit.rss }}{% else %}10{% endif %}{% endcapture %}{% for post in site.posts limit:var_posts_max %}
   <entry>
-    <title>{{ post.title }}</title>
+    <title><![CDATA[{{ post.title }}]]></title>
     <link href="{{ site.url }}{{ post.url }}"/>
     <updated>{{ post.date | date_to_xmlschema }}</updated>
-    <id>{{ site.url }}{{ post.url }}</id>
-    <content type="html">{{ post.content | markdownify | xml_escape }}</content>
-  </entry>{% endfor %}
+    <id><![CDATA[{{ site.url }}{{ post.url }}]]></id>
+    <content type="html"><![CDATA[{%if post.excerpt %}&lt;p&gt;{{ post.excerpt | xml_escape }}&lt;/p&gt;
+
+{% endif %}{{ post.content | markdownify | xml_escape }}]]></content>
+  </entry>{% endfor %}{% assign var_posts_max = nil %}
 </feed>
