@@ -2,7 +2,7 @@
 layout: post
 title: 在 PHPMD 中抑制『方法过多』的警告
 date: 2013-04-11 11:14:08+08:00
-tags: ["php", "phpmd"]
+tags: ["php", "phpmd", "tox"]
 excerpt: 这两天在重构 Tox 中的 Pdo 部分，但一直困扰于 PHPMD 的警告。因为不愿意为了消除警告而无意义地继承拆分，因此小研究了一下 PHPMD 的用法。
 ---
 
