@@ -76,8 +76,8 @@ unit:
   },
   "require-dev": {
     "ext-memcached": "*",
-    "ext-pdo-mysql": "*",
-    "ext-xdebug": "*",
+    "ext-pdo_mysql": "*",
+    "ext-xdebug": ">=2.1",
     "mikey179/vfsStream": "1.*@stable",
     "phpunit/phpunit": "3.*@stable",
     "squizlabs/php_codesniffer": "1.*@stable",
@@ -97,7 +97,7 @@ unit:
      [exec] Your requirements could not be resolved to an installable set of packages.
      [exec]
      [exec]   Problem 1
-     [exec]     - The requested PHP extension ext-pdo-mysql * is missing from your system.
+     [exec]     - The requested PHP extension ext-pdo_mysql * is missing from your system.
      [exec]
 
 BUILD FAILED
