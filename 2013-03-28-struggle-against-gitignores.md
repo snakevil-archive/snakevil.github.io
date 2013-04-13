@@ -10,7 +10,7 @@ excerpt: 玩 Git 这么久，一直都会觉得 `.gitignore` 是一种很神奇�
 
 ## 了解 `git-status`
 
-自 [Git][] 1.6 开始，`git status` 会使用如下的指令以检查哪些文件会被忽略（*REF: [Show ignored files in git on stackOverflow](http://stackoverflow.com/questions/466764/show-ignored-files-in-git)*）：
+自 [Git][] 1.6 开始，`git status` 会使用如下的指令以检查哪些文件会被忽略（ _REF: [Show ignored files in git on stackOverflow](http://stackoverflow.com/questions/466764/show-ignored-files-in-git)_ ）：
 
 {% highlight sh %}
 'git' ls-files -o -i --exclude-standard
@@ -33,7 +33,7 @@ excerpt: 玩 Git 这么久，一直都会觉得 `.gitignore` 是一种很神奇�
 
 *注：该子命令引入自 1.8.2 版本（REF: [git-check-ignore(1) Manpage on Google Code](https://code.google.com/p/git-core/source/browse/Documentation/git-check-ignore.txt?name=v1.8.2)），也是此时最新的版本。*
 
-需要注意地是，无论是从什么地方开始执行这个指令，它都会认为当前目录是根目录（*在 [Git][] 配置中可直接使用 `$GIT_PREFIX` 环境变量，外部 shell 中使用 `'git' rev-parse --show-toplevel`（REF: [Line 40 of snakevil/bashrc.x/src/etc/bashrc.d/95-prompt-vcs-git.sh on Github](https://github.com/snakevil/bashrc.x/blob/master/src/etc/bashrc.d/95-prompt-vcs-git.sh#L40)） 取得*），然后向深处开始寻找 `.gitignore` 配置…（见下图）！
+需要注意地是，无论是从什么地方开始执行这个指令，它都会认为当前目录是根目录（ _在 [Git][] 配置中可直接使用 `$GIT_PREFIX` 环境变量，外部 shell 中使用 `'git' rev-parse --show-toplevel`（REF: [Line 40 of snakevil/bashrc.x/src/etc/bashrc.d/95-prompt-vcs-git.sh on Github](https://github.com/snakevil/bashrc.x/blob/master/src/etc/bashrc.d/95-prompt-vcs-git.sh#L40)） 取得_ ），然后向深处开始寻找 `.gitignore` 配置…（见下图）！
 
 ![Mad git-check-ignore on 1.8.2](/s/a/1/mad-git-check-ignore-on-1_8_2.png)
 
@@ -75,7 +75,7 @@ excerpt: 玩 Git 这么久，一直都会觉得 `.gitignore` 是一种很神奇�
 
 > * A trailing `/` matches everything inside. For example, `abc/` matches all files inside directory `abc`, relative to the location of the `.gitignore` file, with infinite depth.
 
-**8** 以 `/` 结尾的模式匹配某个目录内的所有文件和子目录。例如， `abc/` 匹配 `.gitignore` 文件所在目录的 `abc` 子目录中的所有文件，而且不限深度。（*囧！这和前面的模式 **3** 有甚区别？！*）
+**8** 以 `/` 结尾的模式匹配某个目录内的所有文件和子目录。例如， `abc/` 匹配 `.gitignore` 文件所在目录的 `abc` 子目录中的所有文件，而且不限深度。（ _囧！这和前面的模式 **3** 有甚区别？！_ ）
 
 > * A slash followed by two consecutive asterisks then a slash matches zero or more directories. For example, `a/**/b` matches `a/b`, `a/x/b`, `a/x/y/b` and so on.
 

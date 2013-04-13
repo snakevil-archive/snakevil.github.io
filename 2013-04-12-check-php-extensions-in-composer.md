@@ -67,7 +67,7 @@ excerpt: 家里新配了一个 Tox 的开发环境。动手之前先跑一遍 An
 
 依此对 [`composer.json`](https://github.com/php-tox/tox/blob/master/composer.json) 进行修改。截取 `require` 及 `require-dev` 片段如下：
 
-{% highlight json linenos=table %}
+{% highlight json %}
   "require": {
     "php": ">=5.3.0",
     "psr/log": "1.*@stable"
