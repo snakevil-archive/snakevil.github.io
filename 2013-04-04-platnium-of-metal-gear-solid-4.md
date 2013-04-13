@@ -11,7 +11,7 @@ tags: ["game-trace", "playstation", "ps3", "metal-gear-solid", "mgs4"]
 
 ![Snapshot of Platnium throphy](/s/a/7/platnium-of-metal-gear-solid-4-1.png)
 
-<!--{{ site.title }}-->
+<a name="more"></a>
 
 这是我 PS3 游戏时代的第十一个白金奖杯，也是耗时最久的一个，甚至还是最危险的一个——
 

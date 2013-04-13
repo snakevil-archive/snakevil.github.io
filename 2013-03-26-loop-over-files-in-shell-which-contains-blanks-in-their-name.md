@@ -12,7 +12,7 @@ tags: ["shell", "git"]
 [Git]: https://git.wiki.kernel.org/index.php/Git_FAQ
 [GitHub]: https://github.com
 
-<!--{{ site.title }}-->
+<a name="more"></a>
 
 其代码如下：
 

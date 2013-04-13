@@ -11,7 +11,7 @@ tags: ["github", "ssh", "life-trace"]
 
 [GitHub]: https://github.com
 
-<!--{{ site.title }}-->
+<a name="more"></a>
 
 过了半个小时，我把问题都解决了，再尝试，就发现恢复了。
 

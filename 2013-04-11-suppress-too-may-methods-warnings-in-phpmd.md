@@ -20,7 +20,7 @@ excerpt: 这两天在重构 Tox 中的 Pdo 部分，但一直困扰于 PHPMD 的
 [Tox]: https://github.com/php-tox/tox
 [PSR-2]: https://github.com/php-fig/fig-standards/blob/master/accepted/PSR-2-coding-style-guide.md
 
-<!--{{ site.title }}-->
+<a name="more"></a>
 
 查看 [`TooManyMethods` 规则的源代码](https://github.com/phpmd/phpmd/blob/master/src/main/php/PHP/PMD/Rule/Design/TooManyMethods.php#L129)，我找到了一个 [符合需要的属性 `ignorepattern`](https://github.com/phpmd/phpmd/blob/master/src/main/php/PHP/PMD/Rule/Design/TooManyMethods.php#L94) 。
 
