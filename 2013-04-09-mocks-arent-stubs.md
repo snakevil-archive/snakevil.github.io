@@ -8,19 +8,19 @@ excerpt: 『模拟对象』一词，开始越来越多地用于描述那些在�
 
 ## 目录 ##
 
-* [常规测试](#regular-tests)
-* [使用模拟对象进行测试](#tests-with-mock-objects)
-    * [使用 EasyMock](#using-easymock)
-* [模拟（对象）与存根（对象）的区别](#difference-between-mocks-and-stubs)
-* [古典测试和模拟主义的测试](#classical-and-mockist-testing)
-* [根据差异选择](#choosing-between-differences)
-    * [驾驭 TDD](#driving-tdd)
-    * [场地搭建](#fixture-setup)
-    * [测试隔离](#test-isolation)
-    * [结合测试来实现（功能）](#coupling-tests-to-implementations)
-    * [设计风格](#design-style)
-* [做古典主义者还是模拟主义者？](#so-should-i-be-classicist-or-mockist)
-* [最后的想法](#final-thoughts)
+* [常规测试]({{ page.url }}#regular-tests)
+* [使用模拟对象进行测试]({{ page.url }}#tests-with-mock-objects)
+    * [使用 EasyMock]({{ page.url }}#using-easymock)
+* [模拟（对象）与存根（对象）的区别]({{ page.url }}#difference-between-mocks-and-stubs)
+* [古典测试和模拟主义的测试]({{ page.url }}#classical-and-mockist-testing)
+* [根据差异选择]({{ page.url }}#choosing-between-differences)
+    * [驾驭 TDD]({{ page.url }}#driving-tdd)
+    * [场地搭建]({{ page.url }}#fixture-setup)
+    * [测试隔离]({{ page.url }}#test-isolation)
+    * [结合测试来实现（功能）]({{ page.url }}#coupling-tests-to-implementations)
+    * [设计风格]({{ page.url }}#design-style)
+* [做古典主义者还是模拟主义者？]({{ page.url }}#so-should-i-be-classicist-or-mockist)
+* [最后的想法]({{ page.url }}#final-thoughts)
 
 ## 引言 ##
 
