@@ -198,6 +198,7 @@ h5, h6 {
   border-radius: .5em;
 }
 .page-wrapper .page-main .blog-post .post-footer .post-more {
+  text-align: center;
   margin: 1em;
 }
 .page-wrapper .page-main .blog-post .post-footer .post-more a {
