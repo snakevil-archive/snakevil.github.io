@@ -68,6 +68,6 @@
       <span>.</span>
     </div>
   </div></footer>
-</body>
+{% if site.services.google.analytics.id and site.services.google.analytics.account %}{% include plugins/google-analytics.html %}{% endif %}</body>
 </html>
 

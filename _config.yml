@@ -41,6 +41,7 @@ services:
     analytics:
       id: "UA-39915276-1"
       account: "szen.in"
+      mirror: /s/j/ga.js
   disqus:
     id: snakevil
   twitter:
