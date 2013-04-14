@@ -1,5 +1,5 @@
         <section><div class="post-content">
-{{ post.content | split:"<p><a name="#more"></a>" | first }}        </div></section>{% capture var_post_segments_length %}{{ post.content | split:"<a name="#more"></a>" | size }}{% endcapture %}{% if var_post_segments_length > "1" %}
+{{ post.content | split:'<!--more-->' | first }}        </div></section>{% capture var_post_segments_length %}{{ post.content | split:'<!--more-->' | size }}{% endcapture %}{% if var_post_segments_length > "1" %}
         <footer><div class="post-footer">
           <p class="post-more"><a href="{{ post.url }}#more" target="_top">(More)</a></p>
         </div></footer>{% endif %}{% assign var_post_segments_length = nil %}

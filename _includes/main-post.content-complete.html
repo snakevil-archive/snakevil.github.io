@@ -1,5 +1,5 @@
       <section><div class="post-content" itemprop="articleBody">
-{{ content }}      </div></section>
+{{ content | replace:'<!--more-->','<p><a name="more"></a></p>' }}      </div></section>
       <footer><div class="post-footer">
 {% if post.next or post.previous %}        <fieldset class="post-siblings">
           <legend>Siblings</legend>
