@@ -19,13 +19,31 @@ layout: nil
     <priority>0.8</priority>
   </url>{% endfor %}{% assign var_date_stack = nil %}{% for post in site.posts %}{% capture var_date %}{{ post.date | date:'%Y-%m' }}{% endcapture %}{% if var_date != var_date_stack %}{% assign var_date_stack = var_date %}
   <url>
+    <loc>{{ site.url }}/tag/</loc>
+    <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>{{ site.url }}/month/{{ var_date }}.html</loc>
+    <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>{{ site.url }}/{{ post.date | date:'%Y' }}/{{ post.date | date:'%m' }}/</loc>
     <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
   </url>{% endif %}{% endfor %}{% for post in site.posts %}{% capture var_date %}{{ post.date | date:'%Y' }}{% endcapture %}{% if var_date != var_date_stack %}{% assign var_date_stack = var_date %}
   <url>
     <loc>{{ site.url }}/month/{{ var_date }}.html</loc>
+    <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>{{ site.url }}/{{ var_date }}/</loc>
     <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
