@@ -79,7 +79,7 @@ h5, h6 {
 .page-header .blog-pages {
   text-align: right;
   width: 62%;
-  min-width: 806px;
+  min-width: 1000px;
   margin: 1em auto;
 }
 .page-header .blog-pages li {
@@ -95,18 +95,18 @@ h5, h6 {
 .page-wrapper {
   margin: 0 auto;
   width: 62%;
-  min-width: 806px;
+  min-width: 1000px;
 }
 .page-wrapper .page-sidebar {
   float: right;
-  width: 30%;
+  width: 32%;
   margin-bottom: 1em;
 }
 .page-wrapper .page-main {
   margin: 1em 0;
 }
 .page-wrapper aside + section > .page-main {
-  width: 66%;
+  width: 64%;
 }
 .page-wrapper .page-main .page-nav {
   position: absolute;
