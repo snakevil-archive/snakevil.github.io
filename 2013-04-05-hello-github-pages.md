@@ -2,7 +2,15 @@
 layout: post
 title: "你好， GitHub Pages ！"
 date: 2013-04-05 22:09:44+08:00
-tags: ["github-pages", "life-trace"]
+tags:
+  - "github-pages"
+  - "github"
+  - "life-trace"
+keywords:
+  - "blog"
+  - "博客"
+  - "scriptogram"
+  - "seo"
 excerpt: 虽然 scriptogr.am 在 SEO 做得非常不错——三天之内页面就能上 Google 关键词搜索第一页——但样式实在是太苦手了，API 也简略到不能忍。所以在了解了 GitHub Pages 之后，果断搬家了。
 ---
 

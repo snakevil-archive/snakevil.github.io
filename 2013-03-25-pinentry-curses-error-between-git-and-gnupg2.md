@@ -1,8 +1,18 @@
 ---
 layout: post
-title: "Git 与 GnuPG2 配合地 pinentry-curses 错误"
+title: "Git 使用 GnuPG2 签名的 pinentry-curses 错误"
 date: 2013-03-25 12:09:00+08:00
-tags: ["git", "gnupg", "gnupg2", "gpg", "pinentry-curses"]
+tags:
+  - "git"
+  - "gnupg"
+  - "gpg"
+  - "linux"
+keywords:
+  - "gnupg2"
+  - "pinentry-curses"
+  - "gnu"
+  - "mac-os-x"
+  - "macports"
 ---
 
 前几天为了进一步保障 [Git][] 版本的可靠性，加上了 [gpg][GnuPG] 的签名。

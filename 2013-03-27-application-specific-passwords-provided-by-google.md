@@ -2,7 +2,14 @@
 layout: post
 title: "Google 开始提供应用级密码功能"
 date: 2013-03-27 23:38:00+08:00
-tags: ["internet", "web-services-of-life"]
+tags:
+  - "internet"
+  - "web-services-of-life"
+  - "life-trace"
+keywords:
+  - "google"
+  - "appliance-password"
+  - "应用密码"
 ---
 
 [Google][] 近期不知道啥时候就悄然上线了应用级密码功能。体验暂时不深，还不好定调子是该拍马屁还是拍砖。先过把瘾头。

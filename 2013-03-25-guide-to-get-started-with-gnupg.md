@@ -1,8 +1,16 @@
 ---
 layout: post
-title: "GnuPG 入门教程"
+title: "GnuPG 入门"
 date: 2013-03-25 14:12:00+08:00
-tags: ["gnupg", "gpg"]
+tags:
+  - "gnupg"
+  - "gpg"
+keywords:
+  - "gnu"
+  - "pgp"
+  - "git"
+  - "signature"
+  - "签名"
 ---
 
 近期觅到一篇好文《[A Git Horror Story: Repository Integrity With Signed Commits](http://mikegerwitz.com/docs/git-horror-story.html)》，深得我心。

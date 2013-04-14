@@ -2,7 +2,21 @@
 layout: post
 title: 【译】模拟（对象）不是存根（对象）
 date: 2013-04-09 11:07:34+08:00
-tags: ["translation", "study-trace", "unit-test", "xunit", "tdd"]
+tags:
+  - "translation"
+  - "study-trace"
+  - "unit-test"
+  - "xunit"
+  - "tdd"
+keywords:
+  - "翻译"
+  - "unittesting"
+  - "单元测试"
+  - "test-driven"
+  - "测试驱动"
+  - "bdd"
+  - "behavior-driven"
+  - "行为驱动"
 excerpt: 『模拟对象』一词，开始越来越多地用于描述那些在测试中模仿真实对象的特殊对象。绝大多数的语言环境现在都有了能够轻易创建模拟对象的框架。但是，往往没有意识到地是，模拟对象是一种非常特殊的测试用对象，因为它使我们拥有了一种完全不同风格的测试方法。在本文中，我将解释模拟对象是如何工作，它们是如何鼓励基于行为验证的测试，以及那些关注于它们的社区是如何在使用它们来制定一种不同的测试风格。
 ---
 

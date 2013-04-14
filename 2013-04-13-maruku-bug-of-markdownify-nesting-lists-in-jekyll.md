@@ -2,7 +2,13 @@
 layout: post
 title: 'Jekyll Maruku 对处理层叠列表有 BUG'
 date: 2013-04-13 10:16:44+08:00
-tags: ['jekyll', 'maruku', 'kramdown', 'markdown']
+tags:
+  - 'jekyll'
+  - 'github-pages'
+keywords:
+  - 'maruku'
+  - 'kramdown'
+  - 'markdown'
 excerpt: Jekyll 所使用的 Maruku 是一个很赞的 Markdown 解释器，带有语法检查功能。当 Markdown 语法上存在歧义或错误时，能够及时的指出问题所在。我在重构页面时也为此而放弃了 Redcarpet 。然而让我没想到地是， Maruku 处理层叠列表居然会有如此弱智的 BUG ！只好再转投 Kramdown 的怀抱了。
 ---
 

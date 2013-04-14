@@ -2,7 +2,13 @@
 layout: post
 title: "博客页面重构告一段落"
 date: 2013-04-14 16:56:43+08:00
-tags: ["life-trace", "github-pages"]
+tags:
+  - "life-trace"
+  - "github-pages"
+keywords:
+  - "refactor"
+  - "重构"
+  - "octopress"
 ---
 
 经过周末两天的奋战，终于把页面和样式都重构了。自我感觉还不错。本来想着来做标题党《博客页面重构完成》，字都打完又删了，感觉还是任重而道远哇。 [陈江](http://yccj.in) 同学说：「比之前那个版本是好多了，但为啥在 iPad 上看样式布局都是凌乱地？」好吧…下周有功夫，再来做移动版本的样式。

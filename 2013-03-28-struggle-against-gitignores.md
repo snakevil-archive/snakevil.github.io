@@ -1,8 +1,13 @@
 ---
 layout: post
-title: "与 .gitignores 的艰苦卓绝地斗争"
+title: "配置 .gitignores"
 date: 2013-03-28 11:45:00+08:00
-tags: ["git", "tox"]
+tags:
+  - "git"
+  - "tox"
+keywords:
+  - "翻译"
+  - "gitignores"
 excerpt: 玩 Git 这么久，一直都会觉得 `.gitignore` 是一种很神奇的、难以琢磨地配置。你永远不知道下一条规则会被如何处理…
 ---
 

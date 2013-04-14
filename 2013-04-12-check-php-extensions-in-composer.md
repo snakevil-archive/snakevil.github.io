@@ -2,7 +2,15 @@
 layout: post
 title: 使用 Composer 检查 PHP 扩展的依赖关系
 date: 2013-04-12 21:20:06+08:00
-tags: ["php", "composer", "tox"]
+tags:
+  - "php"
+  - "composer"
+  - "tox"
+keywords:
+  - "extension"
+  - "扩展"
+  - "dependence"
+  - "依赖管理"
 excerpt: 家里新配了一个 Tox 的开发环境。动手之前先跑一遍 Ant 检查环境是否能够正常工作。结果 PHPUnit 就报错了——提示 PHP 环境中缺少 PDO::MYSQL_ATTR_USE_BUFFERED_QUERY 常量。果然还是差了 php-pdo-mysql 扩展没有安装。为了以后避免重复出现这么丑陋地问题，因此就想通过 Composer 来检查 PHP 扩展的依赖关系。
 ---
 

@@ -2,7 +2,8 @@
 layout: post
 title: "新的旅程"
 date: 2013-03-23 01:29:00+08:00
-tags: ["life-trace"]
+tags:
+  - "life-trace"
 ---
 
 自从 [Microsoft Live! Space](#oops,it.has.dead.many.years) 关闭之后，辗转流浪过许久，渐渐地就不写文章了。

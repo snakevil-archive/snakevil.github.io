@@ -1,8 +1,16 @@
 ---
 layout: post
-title: "在 Shell 中遍历带空格的文件列表"
+title: "Shell 遍历带空格的文件列表"
 date: 2013-03-26 20:15:00+08:00
-tags: ["shell", "git"]
+tags:
+  - "shell"
+  - "git"
+  - "linux"
+keywords:
+  - "bash"
+  - "gnu"
+  - "gitconfig"
+  - "github"
 ---
 
 近期在 [Git][] 全局配置中新增了一个仿 `ls` 的别名，使用 shell 实现，其显示效果类似于 [GitHub][] 。但在处理带空格的文件时，发现一些问题。因此又做了一些修正。

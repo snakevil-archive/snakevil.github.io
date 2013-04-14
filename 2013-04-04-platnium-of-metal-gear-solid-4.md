@@ -2,7 +2,21 @@
 layout: post
 title: "核心装备4终于白金了！"
 date: 2013-04-04 12:17:05+08:00
-tags: ["game-trace", "playstation", "ps3", "metal-gear-solid", "mgs4"]
+tags:
+  - "life-trace"
+  - "game-trace"
+  - "playstation"
+  - "metal-gear-solid"
+  - "platinum"
+keywords:
+  - "ps3"
+  - "psn"
+  - "mgs4"
+  - "合金装备"
+  - "潜龙谍影"
+  - "白金"
+  - "dead-space"
+  - "死亡空间"
 ---
 
 感谢 [陈江](http://yccj.in) 同学把我带进《合金装备》这个天坑！感谢 KONAMI 在时隔五年之后还发布了《合金装备4》的奖杯补丁，感谢小岛秀夫果不其然把全音乐收集作为奖杯之一！！感谢房子装修不久留给我无形的空间，感谢老婆在家带淡淡留给我充足的时间！！！感谢给力的 PS3 和同样给力的玩了近四年仍然能读地游戏碟！！！！感谢一切相关的和不相关的路人甲和路人乙们…
