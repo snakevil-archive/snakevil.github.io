@@ -12,7 +12,7 @@ tags: ["gnupg", "gpg"]
 [GnuPG]: http://gnupg.org
 [OpenSSL]: http://www.openssl.org
 
-<a name="more"></a>
+<!--more-->
 
 ### 0 安装 [GnuPG][]
 

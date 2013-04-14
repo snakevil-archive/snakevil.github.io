@@ -29,7 +29,7 @@ excerpt: Jekyll 所使用的 Maruku 是一个很赞的 Markdown 解释器，带�
 [Maruku]: https://rubygems.org/gems/maruku
 [Markdown]: http://daringfireball.net/projects/markdown/
 
-<a name="more"></a>
+<!--more-->
 
 改用 [Kramdown][] 后，处理结果就正常了。除在 `_config.xml` 指定了 [Markdown][] 解释器，绝对无其它任何变动！
 

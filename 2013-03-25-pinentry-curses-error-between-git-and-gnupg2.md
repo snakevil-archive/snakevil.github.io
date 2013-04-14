@@ -28,7 +28,7 @@ tags: ["git", "gnupg", "gnupg2", "gpg", "pinentry-curses"]
 [GnuPG]: http://gnupg.org
 [MacPorts]: http://www.macports.org
 
-<a name="more"></a>
+<!--more-->
 
 **当时为了先做正事，避免被耽搁，被迫删除了私钥的密码。**
 

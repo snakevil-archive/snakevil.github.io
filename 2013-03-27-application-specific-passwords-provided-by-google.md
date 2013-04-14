@@ -9,7 +9,7 @@ tags: ["internet", "web-services-of-life"]
 
 [Google]: https://www.google.com
 
-<a name="more"></a>
+<!--more-->
 
 1. 点击右上角的头像，选择『Account』链接；
 

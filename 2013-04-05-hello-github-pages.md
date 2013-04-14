@@ -16,7 +16,7 @@ excerpt: 虽然 scriptogr.am 在 SEO 做得非常不错——三天之内页面�
 [Jekyll]: https://github.com/mojombo/jekyll
 [GitHub]: https://github.com
 
-<a name="more"></a>
+<!--more-->
 
 用大图拍照纪念 ^_^ ：
 

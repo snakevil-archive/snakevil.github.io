@@ -9,7 +9,7 @@ tags: ["life-trace", "github-pages"]
 
 ![First Page View of the New Style](/s/a/b/new-style-generated-in-20130414-first-page-view.png)
 
-<a name="more"></a>
+<!--more-->
 
 这次重构其实是以页面为主，样式只是顺路地事情。因为之前初版时比较仓促，对 [Jekyll][] 又完全不熟悉，完全都是猜着做页面。导致有很多莫名其妙的细节问题难以处理，要稍微做点变更都觉得很困难。
 

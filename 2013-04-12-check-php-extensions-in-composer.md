@@ -59,7 +59,7 @@ excerpt: 家里新配了一个 Tox 的开发环境。动手之前先跑一遍 An
 
 [Ant]: http://ant.apache.org
 
-<a name="more"></a>
+<!--more-->
 
 去 [Composer][] 官网翻文档，并没有找到关于这一点的明确说明。关门放狗，就找到了 [GitHub][] 中 [Composer][] 官方版本库的这个提案《[#383 Support for pecl dependencies](https://github.com/composer/composer/issues/383#issuecomment-4310430)》。作者在回复中明确说明了：
 

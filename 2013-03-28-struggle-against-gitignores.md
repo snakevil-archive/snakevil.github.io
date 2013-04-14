@@ -21,7 +21,7 @@ excerpt: 玩 Git 这么久，一直都会觉得 `.gitignore` 是一种很神奇�
 [Tox]: https://github.com/php-tox/tox
 [Git]: https://git.wiki.kernel.org/index.php/Git_FAQ
 
-<a name="more"></a>
+<!--more-->
 
 ## 未来可期的 `git-check-ignore`
 
