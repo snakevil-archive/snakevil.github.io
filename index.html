@@ -5,7 +5,7 @@ kind: index
     <section><div class="page-main">
 {% for post in site.posts limit:site.limit.index %}{% include main-post.html %}{% endfor %}{% if site.limit.index %}{% capture tmp_site_posts_length_extra %}{{ site.posts | size | minus:site.limit.index }}{% endcapture %}{% if tmp_site_posts_length_extra > "0" %}      <aside><div>
         <nav><div class="index-more">
-          <a href="/archive.html" target="_parent">Read {{ tmp_site_posts_length_extra }} left post{% if tmp_site_posts_length_extra > "1" %}s{% endif %}</a>
+          <a href="/archive.html#more" target="_parent">Read {{ tmp_site_posts_length_extra }} left post{% if tmp_site_posts_length_extra > "1" %}s{% endif %}</a>
         </div></nav>
       </div></aside>{% endif %}{% assign tmp_site_posts_length_extra = nil %}{% endif %}
     </div></section>

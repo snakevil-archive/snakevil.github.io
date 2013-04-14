@@ -12,4 +12,5 @@ navigation: true
           </li>
         </ul></nav>
       </div>
-{% for post in site.posts %}{% include main-post.html %}{% endfor %}    </div></section>
+{% assign var_posts_counter = 0 %}{% capture var_posts_offset %}{{ site.limit.index }}{% endcapture %}{% for post in site.posts %}{% if var_posts_offset and var_posts_counter == var_posts_offset %}      <div><a name="more"></a></div>
+{% endif %}{% include main-post.html %}{% capture var_posts_counter %}{{ var_posts_counter | plus:1 }}{% endcapture %}{% endfor %}{% assign var_posts_offset = nil %}{% assign var_posts_counter = nil %}    </div></section>
