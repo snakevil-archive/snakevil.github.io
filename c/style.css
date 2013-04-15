@@ -93,8 +93,8 @@ h1, h2, h3, h4, h5, h6,
 .page-header .blog-brief {
   font-family: 'Arizonia', cursive;
 }
-code,
-.page-header .blog-title {
+.page-header .blog-title,
+.page-wrapper .page-main .blog-post .post-content code {
   font-family: 'Source Code Pro', 'Monaco', 'Console', 'Courier New', monospace;
 }
 
@@ -249,6 +249,7 @@ a:hover {
   text-decoration: none;
 }
 .page-wrapper .page-main .blog-post .post-content code {
+  font-size: .8em;
   background-color: #f4ffe0;
   border-radius: .3em;
   padding: .2em;
