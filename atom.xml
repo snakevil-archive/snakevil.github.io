@@ -17,8 +17,8 @@ layout: nil
     <link href="{{ site.url }}{{ post.url }}"/>
     <updated>{{ post.date | date_to_xmlschema }}</updated>
     <id><![CDATA[{{ site.url }}{{ post.url }}]]></id>
-    <content type="html"><![CDATA[{%if post.excerpt %}&lt;p&gt;{{ post.excerpt | xml_escape }}&lt;/p&gt;
+    <content type="html">{%if post.excerpt %}&lt;p&gt;{{ post.excerpt | xml_escape }}&lt;/p&gt;
 
-{% endif %}{{ post.content | markdownify | xml_escape }}]]></content>
+{% endif %}{{ post.content | xml_escape }}</content>
   </entry>{% endfor %}{% assign var_posts_max = nil %}
 </feed>
