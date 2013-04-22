@@ -46,3 +46,4 @@ services:
     id: snakevil
   twitter:
     id: 323060021409746944
+    limit: 10

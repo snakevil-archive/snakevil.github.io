@@ -1,4 +1,4 @@
-      <section><div class="plugin-twitter-timeline">
-        <a class="twitter-timeline" data-dnt="true" href="https://twitter.com/{{ site.author.twitter }}" data-widget-id="{{ site.services.twitter.id }}" data-chrome="nofooter transparent">Tweets by @{{ site.author.twitter }}</a>
-        <script type="text/javascript">!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
-      </div></section>
+      <section><fieldset class="plugin-twitter-timeline" id="{{ site.services.twitter.id }}"{% if site.services.twitter.limit %} size="{{ site.services.twitter.limit }}"{% endif %}>
+        <legend><a href="#">Twitter Timeline</a></legend>
+        <script type="text/javascript" src="/s/j/plugin-twitter-timeline.js"></script>
+      </fieldset></section>
