@@ -22,18 +22,23 @@
   document.getElementsByClassName('page-sidebar')[0].style.display = 'block';
   this.box.style.display = 'block';
   var l = 10;
-  if (this.box.hasAttribute('size')) {
-    l = Math.floor(this.box.getAttribute('size'));
+  if (this.box.hasAttribute('szen:size')) {
+    l = Math.floor(this.box.getAttribute('szen:size'));
     if (isNaN(l)) {
       l = 10;
     }
+  }
+  var b = false;
+  if (this.box.hasAttribute('szen:avatar')) {
+    b = 'true' == this.box.getAttribute('szen:avatar') ||
+      'enabled' == this.box.getAttribute('szen:avatar');
   }
   var h = '<legend><a href="' + j.root + '">Twitter Timeline</a></legend>' +
     '<ul>';
   for (var i = 0; i < l; i++) {
     h += '<li' + (j.records[i].retweeted ? ' class="retweet"' : '') + '>' +
       '<a class="speaker" href="' + j.records[i].ref + '">' +
-      '<img src="' + j.records[i].avatar + '" width="16" />' +
+      (b ? ('<img src="' + j.records[i].avatar + '" width="16" />') : '') +
       '<span>' + j.records[i].speaker + '</span></a>' +
       '<span class="words">' + j.records[i].words + '</span>' +
       '<a class="time" href="' + j.records[i].ref + '">' +
