@@ -34,7 +34,7 @@
     h += '<li' + (j.records[i].retweeted ? ' class="retweet"' : '') + '>' +
       '<a class="speaker" href="' + j.records[i].ref + '">' +
       '<img src="' + j.records[i].avatar + '" width="16" />' +
-      j.records[i].speaker + '</a>' +
+      '<span>' + j.records[i].speaker + '</span></a>' +
       '<span class="words">' + j.records[i].words + '</span>' +
       '<a class="time" href="' + j.records[i].ref + '">' +
       this.format(j.records[i].time) + '</a>' +
