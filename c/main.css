@@ -1,5 +1,5 @@
 body,
-section, article, aside, nav, header, footer
+section, article, aside, nav, header, footer,
 fieldset, legend,
 ul, ol, li,
 blockquote,
@@ -12,6 +12,9 @@ p {
 }
 section, article, aside, nav, header, footer {
   display: block;
+}
+ul, ol {
+  list-style: none;
 }
 
 body {
@@ -82,7 +85,7 @@ h5, h6 {
 .page-header .blog-pages {
   text-align: right;
   width: 62%;
-  min-width: 1000px;
+  min-width: 780px;
   margin: 1em auto;
 }
 .page-header .blog-pages li {
@@ -98,18 +101,11 @@ h5, h6 {
 .page-wrapper {
   margin: 0 auto;
   width: 62%;
-  min-width: 1000px;
-}
-.page-wrapper .page-sidebar {
-  float: right;
-  width: 32%;
-  margin-bottom: 1em;
+  min-width: 780px;
 }
 .page-wrapper .page-main {
-  margin: 1em 0;
-}
-.page-wrapper aside + section > .page-main {
-  width: 64%;
+  float: left;
+  width: 62%;
 }
 .page-wrapper .page-main .page-nav {
   position: absolute;
@@ -181,6 +177,7 @@ h5, h6 {
 }
 .page-wrapper .page-main .blog-post .post-content pre {
   overflow: auto;
+  max-height: 512px;
 }
 .page-wrapper .page-main .blog-post .post-content ul,
 .page-wrapper .page-main .blog-post .post-content ol {
@@ -239,7 +236,7 @@ h5, h6 {
   text-align: center;
 }
 .page-wrapper .page-main .index-more {
-  margin: 2.5em 0;
+  margin: 2em 0;
   text-align: center;
   font-weight: bold;
   font-size: 1.4em;
@@ -298,6 +295,13 @@ h5, h6 {
   content: ')';
   font-size: .5em;
 }
+.page-wrapper .page-sidebar {
+  float: right;
+  width: 36%;
+  margin: 2em 0;
+  word-wrap: break-word;
+  word-break: break-all;
+}
 .page-footer {
   font-size: .8em;
   text-align: center;
@@ -319,7 +323,48 @@ h5, h6 {
 .page-wrapper .page-main .blog-post .post-footer .plugin-disqus-thread {
   margin: 2em 0;
 }
+
 .page-wrapper .page-sidebar .plugin-twitter-timeline {
-  border: solid .1em #E6E6E6;
-  border-radius: .5em;
+  display: none;
+}
+.page-wrapper .page-sidebar .plugin-twitter-timeline legend {
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 1.2em;
+  margin: 1em 0;
+}
+.page-wrapper .page-sidebar .plugin-twitter-timeline legend a {
+  color: inherit;
+}
+.page-wrapper .page-sidebar .plugin-twitter-timeline .retweet::before {
+  content: '\29C9';
+}
+.page-wrapper .page-sidebar .plugin-twitter-timeline li {
+  line-height: 1.7;
+  margin: .5em 0;
+  clear: right;
+}
+.page-wrapper .page-sidebar .plugin-twitter-timeline li a {
+  white-space: normal;
+}
+.page-wrapper .page-sidebar .plugin-twitter-timeline .speaker {
+  color: inherit;
+  margin-right: .5em;
+  font-weight: bold;
+}
+.page-wrapper .page-sidebar .plugin-twitter-timeline .retweet .speaker {
+  margin-left: .5em;
+}
+.page-wrapper .page-sidebar .plugin-twitter-timeline .speaker img {
+  width: 1em;
+  height: 1em;
+  border-radius: .3em;
+  margin-right: .3em;
+}
+.page-wrapper .page-sidebar .plugin-twitter-timeline .time {
+  color: inherit;
+  font-size: .8em;
+  font-style: oblique;
+  float: right;
+  margin-top: .3em;
 }
