@@ -1,6 +1,7 @@
 .page-wrapper .page-main .blog-post .post-content .highlight pre {
   background-color: #222324;
   color: #bababa;
+  text-shadow: none;
 }
 .page-wrapper .page-main .blog-post .post-content .highlight .c1 {
   color: #494b4d;
