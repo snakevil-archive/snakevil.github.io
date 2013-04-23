@@ -1,0 +1,9 @@
+      <section><fieldset class="side-archive">
+        <legend><a href="/archive.html" target="_top">Archive</a></legend>
+        <nav><ul>{% assign var_month_last = '' %}{% for post in site.posts %}{% assign var_month_now = post.date | date:'%Y-%m' %}{% if var_month_last != var_month_now %}
+          <li>
+            <a href="/month/{{ var_month_now }}.html">{{ post.date | date:'%B %Y' }}</a>
+            <span>{% assign var_month_count = 0 %}{% for post in site.posts %}{% assign var_month_last = post.date | date:'%Y-%m' %}{% if var_month_now == var_month_last %}{% capture var_month_count %}{{ var_month_count | plus:1 }}{% endcapture %}{% endif %}{% endfor %}{{ var_month_count }}</span>
+          </li>{% assign var_month_last = var_month_now %}{% endif %}{% endfor %}{% assign var_month_last = nil %}{% assign var_month_now = nil %}
+        </ul></nav>
+      </fieldset></section>
