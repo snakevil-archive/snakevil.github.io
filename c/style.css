@@ -344,18 +344,14 @@ a:hover {
 .page-wrapper .page-sidebar {
   float: left;
   width: 37%;
-  margin: 0 0 2.5em 0;
+  margin: 2.5em 0;
   text-shadow: -1px 1px 1px #f9ffef;
 }
-.page-wrapper .page-sidebar > fieldset,
-.page-wrapper .page-sidebar > div,
-.page-wrapper .page-sidebar > section > fieldset,
-.page-wrapper .page-sidebar > section> div {
-  margin: 3em 14% 3em 24%;
+.page-wrapper .page-sidebar > section > fieldset {
+  margin: 2em 14% 2em 24%;
 }
-.page-wrapper .page-sidebar > fieldset > legend,
 .page-wrapper .page-sidebar > section > fieldset > legend {
-  margin: 3em 0;
+  margin: 1em 0;
   text-align: center;
 }
 .page-footer {
@@ -394,6 +390,23 @@ a:hover {
 .page-footer .blog-power a {
   color: inherit;
   font-weight: bold;
+}
+
+.page-wrapper .page-sidebar .side-archive li a {
+  display: block;
+  float: left;
+  width: 62%;
+  text-align: right;
+  clear: left;
+  margin: .1em 0;
+}
+.page-wrapper .page-sidebar .side-archive li span {
+  display: block;
+  float: right;
+  width: 36%;
+  clear: right;
+  font-size: 1em;
+  margin: .1em 0;
 }
 
 .page-wrapper .page-main .blog-post .post-footer .plugin-disqus-thread {

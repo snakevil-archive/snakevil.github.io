@@ -302,6 +302,24 @@ h5, h6 {
   word-wrap: break-word;
   word-break: break-all;
 }
+.page-wrapper .page-sidebar > section > fieldset {
+  line-height: 1.7;
+  margin: 2em 0;
+}
+.page-wrapper .page-sidebar > section > fieldset > legend {
+  line-height: 1;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 1.2em;
+  margin: 1em 0;
+}
+.page-wrapper .page-sidebar > section > fieldset > legend a {
+  color: inherit;
+}
+.page-wrapper .page-sidebar > section > fieldset div,
+.page-wrapper .page-sidebar > section > fieldset li {
+  margin: .5em 0;
+}
 .page-footer {
   font-size: .8em;
   text-align: center;
@@ -320,6 +338,11 @@ h5, h6 {
   top: .2em;
 }
 
+.page-wrapper .page-sidebar .side-archive li span {
+  font-size: .8em;
+  vertical-align: top;
+}
+
 .page-wrapper .page-main .blog-post .post-footer .plugin-disqus-thread {
   margin: 2em 0;
 }
@@ -327,21 +350,10 @@ h5, h6 {
 .page-wrapper .page-sidebar .plugin-twitter-timeline {
   display: none;
 }
-.page-wrapper .page-sidebar .plugin-twitter-timeline legend {
-  font-weight: bold;
-  text-transform: uppercase;
-  font-size: 1.2em;
-  margin: 1em 0;
-}
-.page-wrapper .page-sidebar .plugin-twitter-timeline legend a {
-  color: inherit;
-}
 .page-wrapper .page-sidebar .plugin-twitter-timeline .retweet::before {
   content: '\29C9';
 }
 .page-wrapper .page-sidebar .plugin-twitter-timeline li {
-  line-height: 1.7;
-  margin: .5em 0;
   clear: right;
 }
 .page-wrapper .page-sidebar .plugin-twitter-timeline li a {
