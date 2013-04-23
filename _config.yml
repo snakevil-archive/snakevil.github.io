@@ -37,11 +37,8 @@ limit:
 asset:
   url: "https://s.szen.in"
 services:
-  google:
-    analytics:
-      id: "UA-39915276-1"
-      account: "szen.in"
-      mirror: /s/j/ga.js
+  baidu:
+    zhanzhang: 444bfed8fb27a1ae6d9ad0f206158025
   disqus:
     id: snakevil
   twitter:

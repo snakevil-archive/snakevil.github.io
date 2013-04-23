@@ -25,7 +25,7 @@
   <link rel="tag" href="{{ site.url }}/tag/{{ tag }}.html" />{% endfor %}
   <link rel="alternate" href="/atom.xml" title="{{ site.title }} by {{ site.author.name }}" type="application/atom+xml" />
   <base target="_blank" />
-</head>
+{% if site.services.baidu.zhanzhang %}{% include plugins/baidu-zhanzhang.html %}{% endif %}</head>
 <body>
   <header><div class="page-header">
     <div class="blog-title"><a href="/" target="_top" itemprop="name">{{ site.title }}</a></div>
