@@ -5,6 +5,7 @@ date: 2013-04-14 16:56:43+08:00
 tags:
   - "life-trace"
   - "github-pages"
+  - "blog-trace"
 keywords:
   - "refactor"
   - "重构"

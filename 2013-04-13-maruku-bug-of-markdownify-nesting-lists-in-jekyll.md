@@ -5,6 +5,7 @@ date: 2013-04-13 10:16:44+08:00
 tags:
   - 'jekyll'
   - 'github-pages'
+  - "blog-trace"
 keywords:
   - 'maruku'
   - 'kramdown'
