@@ -9,7 +9,7 @@
     j.format = f;
     j.box = a[i];
     j.onload = r;
-    j.open('get', 'https://szen.in/twtl?' + a[i].id, true);
+    j.open('get', 'https://szen.in/twtl/' + a[i].id + '.json', true);
     j.send();
   }
 })('plugin-twitter-timeline', function() {
