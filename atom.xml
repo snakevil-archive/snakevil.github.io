@@ -13,7 +13,7 @@ layout: nil
     <email><![CDATA[{{ site.author.email }}]]></email>{% endif %}
   </author>{% capture var_posts_max %}{% if site.limit.rss %}{{ site.limit.rss }}{% else %}10{% endif %}{% endcapture %}{% for post in site.posts limit:var_posts_max %}
   <entry>
-    <title>&laquo;{{ post.title | xml_escape }}&raquo;</title>
+    <title>«{{ post.title | xml_escape }}»</title>
     <link href="{{ site.url }}{{ post.url }}"/>
     <updated>{{ post.date | date_to_xmlschema }}</updated>
     <id><![CDATA[{{ site.url }}{{ post.url }}]]></id>
