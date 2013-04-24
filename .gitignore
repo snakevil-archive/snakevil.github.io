@@ -1,8 +1,0 @@
-*
-
-# git configurations
-!.gitattributes
-!.gitignore
-
-# functional files
-!/*.md
