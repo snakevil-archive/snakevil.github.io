@@ -3,7 +3,7 @@ layout: nil
 ---
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title><![CDATA[{{ site.title }}]]></title>
+  <title>{{ site.title | capitalize | xml_escape }}, {{ site.author.name | capitalize | xml_escape }}'s blog</title>
   <link rel="self" href="{{ site.url }}{{ page.url }}"/>
   <link href="{{ site.url }}"/>
   <updated>{{ site.time | date_to_xmlschema }}</updated>
@@ -13,7 +13,7 @@ layout: nil
     <email><![CDATA[{{ site.author.email }}]]></email>{% endif %}
   </author>{% capture var_posts_max %}{% if site.limit.rss %}{{ site.limit.rss }}{% else %}10{% endif %}{% endcapture %}{% for post in site.posts limit:var_posts_max %}
   <entry>
-    <title><![CDATA[{{ post.title }}]]></title>
+    <title>&laquo;{{ post.title | xml_escape }}&raquo;</title>
     <link href="{{ site.url }}{{ post.url }}"/>
     <updated>{{ post.date | date_to_xmlschema }}</updated>
     <id><![CDATA[{{ site.url }}{{ post.url }}]]></id>
