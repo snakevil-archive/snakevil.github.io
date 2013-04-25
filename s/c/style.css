@@ -99,8 +99,10 @@ h1, h2, h3, h4, h5, h6,
 }
 
 body {
-  background-color: #eaffc1;
+  background-color: #f2fed9;
   color: #14190a;
+  font-size: 16px;
+  margin-bottom: 2.8em;
 }
 a {
   color: #667f33;
@@ -113,8 +115,9 @@ a:hover {
   background-color: #99bf4c;
   padding-top: .2em;
   margin-bottom: 0;
-  box-shadow: inset 0 -1px 1px rgba(0, 0, 0, .4),
-    0 1px 1px rgba(255, 255, 255, .4);
+  box-shadow: inset 0 -1px 1px rgba(0, 0, 0, .4);
+  position: relative;
+  z-index: 1;
 }
 .page-header .blog-title {
   margin: 0;
@@ -175,14 +178,17 @@ a:hover {
 }
 .page-wrapper {
   width: 100%;
-  margin: 0;
+  overflow: hidden;
 }
 .page-wrapper .page-main {
   background-color: #f9ffef;
   float: right;
   width: 62%;
-  margin: 0 2px 2.5em 0;
-  border-left: 1px solid #99bf4c;
+  border: 0 solid #99bf4c;
+  border-left-width: 1px;
+  box-shadow: -1px 0 1em rgba(0, 0, 0, .4);
+  padding-bottom: 32767px;
+  margin-bottom: -32767px;
 }
 .page-wrapper .page-main .page-nav {
   top: 8.5em;
@@ -346,12 +352,14 @@ a:hover {
   width: 37%;
   margin: 2.5em 0;
   text-shadow: -1px 1px 1px #f9ffef;
+  padding-bottom: 32767px;
+  margin-bottom: -32767px;
 }
 .page-wrapper .page-sidebar > section > fieldset {
-  margin: 2em 14% 2em 24%;
+  margin: 3em 14% 3em 24%;
 }
 .page-wrapper .page-sidebar > section > fieldset > legend {
-  margin: 1em 0;
+  margin: 1.5em 0;
   text-align: center;
 }
 .page-footer {
