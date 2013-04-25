@@ -1,14 +1,27 @@
+########################
+# Jekyll Configuration #
+########################
+
 safe: true
 auto: false
 exclude:
   - CNAME
   - README.md
-url: "https://szen.in"
-baseurl: /
 markdown: kramdown
 pygments: true
 lsi: false
+
+#####################
+# URL Configuration #
+#####################
+
+url: "https://szen.in" # DO NOT append any tailing slashes !
+baseurl: /
 permalink: /:year/:month/:title.html
+
+######################
+# Blog Configuration #
+######################
 
 title: "Molting Everyday"
 author:
@@ -34,14 +47,19 @@ limit:
   index: 5
   rss: 36
   recommendation: 6
-asset:
-  url: "https://s.szen.in"
+
+#########################
+# Widgets Configuration #
+#########################
+
 services:
-  baidu:
-    zhanzhang: 444bfed8fb27a1ae6d9ad0f206158025
   disqus:
     id: snakevil
   twitter:
     id: 323060021409746944
-    limit: 10
+    limit: 5
     avatar: false
+  google:
+    analytics:
+      id: "UA-39915276-1"
+      mirror: "/s/j/ga.js"

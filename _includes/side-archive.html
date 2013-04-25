@@ -1,5 +1,5 @@
       <section><fieldset class="side-archive">
-        <legend><a href="/archive.html" target="_top">Archive</a></legend>
+        <legend><a href="/archive.html" target="_top">Monthly Archive</a></legend>
         <nav><ul>{% assign var_month_last = '' %}{% for post in site.posts %}{% assign var_month_now = post.date | date:'%Y-%m' %}{% if var_month_last != var_month_now %}
           <li>
             <a href="/month/{{ var_month_now }}.html">{{ post.date | date:'%B %Y' }}</a>
