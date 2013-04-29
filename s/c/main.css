@@ -182,6 +182,14 @@ h5, h6 {
 .page-wrapper .page-main .blog-post .post-content ul,
 .page-wrapper .page-main .blog-post .post-content ol {
   margin-left: 2em;
+  list-style: disc outside;
+}
+.page-wrapper .page-main .blog-post .post-content ol {
+  list-style-type: decimal;
+}
+.page-wrapper .page-main .blog-post .post-content li {
+  margin-left: 2em;
+  padding-left: .5em;
 }
 .page-wrapper .page-main .blog-post .post-content code {
   font-family: monospace;
