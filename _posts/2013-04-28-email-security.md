@@ -73,7 +73,7 @@ B2C、C2C、物流如此发达的今天，找到这些特殊设备会有多么�
 
 配合着 [S/MIME][SMIME] 或 [PGP][] ，诸多花招根本玩不通，坚不可摧。当然，『他山之石可以攻玉』，操作系统也不安全，那真是说啥都白瞎。
 
-[S/MIME]: http://en.wikipedia.org/wiki/S/MIME
+[SMIME]: http://en.wikipedia.org/wiki/S/MIME
 [PGP]: http://www.openpgp.org
 
 回到最初的故事，让我苦笑不得的另一个原因是——其实我本人发出的每一封邮件，都是由 [S/MIME][SMIME] 数字签名地！ [陈杰][AJC] 同学昨天就是没有注意到这一点。
